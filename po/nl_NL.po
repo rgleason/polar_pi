@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: opencpn\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-03 14:01-0500\n"
-"PO-Revision-Date: 2016-02-26 09:18-0500\n"
+"PO-Revision-Date: 2018-03-11 10:37-0400\n"
 "Last-Translator: nohal <pavel@kalian.cz>\n"
 "Language-Team: Dutch\n"
 "Language: nl_NL\n"
@@ -169,7 +169,7 @@ msgstr "NM"
 
 #: src/Options.cpp:147 src/Options.cpp:156 src/Polar.cpp:1474
 msgid "kts"
-msgstr "knp"
+msgstr "kn"
 
 #: src/Options.cpp:149
 msgid "m"
@@ -225,7 +225,7 @@ msgstr "maand"
 
 #: src/Polar.h:192
 msgid "Polar Filter"
-msgstr "Polairdiagram-filter"
+msgstr "Filter polair-diagram"
 
 #: src/Polar.cpp:74
 msgid "Max. only"
@@ -261,75 +261,75 @@ msgstr "meer dan 10 items gevonden"
 
 #: src/Polar.cpp:401
 msgid "2kts"
-msgstr "2 knp"
+msgstr "2 kn"
 
 #: src/Polar.cpp:404
 msgid "4kts"
-msgstr "4 knp"
+msgstr "4 kn"
 
 #: src/Polar.cpp:407
 msgid "6kts"
-msgstr "6 knp"
+msgstr "6 kn"
 
 #: src/Polar.cpp:410
 msgid "8kts"
-msgstr "8 knp"
+msgstr "8 kn"
 
 #: src/Polar.cpp:413
 msgid "10kts"
-msgstr "10 knp"
+msgstr "10 kn"
 
 #: src/Polar.cpp:416
 msgid "12kts"
-msgstr "12 knp"
+msgstr "12 kn"
 
 #: src/Polar.cpp:419
 msgid "14kts"
-msgstr "14 knp"
+msgstr "14 kn"
 
 #: src/Polar.cpp:422
 msgid "16kts"
-msgstr "16 knp"
+msgstr "16 kn"
 
 #: src/Polar.cpp:425
 msgid "18kts"
-msgstr "18 knp"
+msgstr "18 kn"
 
 #: src/Polar.cpp:428
 msgid "20kts"
-msgstr "20 knp"
+msgstr "20 kn"
 
 #: src/Polar.cpp:431
 msgid "22kts"
-msgstr "22 knp"
+msgstr "22 kn"
 
 #: src/Polar.cpp:434
 msgid "24kts"
-msgstr "24 knp"
+msgstr "24 kn"
 
 #: src/Polar.cpp:437
 msgid "26kts"
-msgstr "26 knp"
+msgstr "26 kn"
 
 #: src/Polar.cpp:440
 msgid "28kts"
-msgstr "28 knp"
+msgstr "28 kn"
 
 #: src/Polar.cpp:443
 msgid "30kts"
-msgstr "30 knp"
+msgstr "30 kn"
 
 #: src/Polar.cpp:446
 msgid "32kts"
-msgstr "32 knp"
+msgstr "32 kn"
 
 #: src/Polar.cpp:449
 msgid "34kts"
-msgstr "34 knp "
+msgstr "34 kn"
 
 #: src/Polar.cpp:452
 msgid "36kts"
-msgstr "36 knp "
+msgstr "36 kn"
 
 #: src/Polar.cpp:455
 msgid "38kts"
@@ -337,7 +337,7 @@ msgstr "38 knp"
 
 #: src/Polar.cpp:458
 msgid "40kts"
-msgstr "40 knp"
+msgstr "40 kn"
 
 #: src/Polar.cpp:501
 msgid "Filtered by:"
@@ -381,9 +381,9 @@ msgid "Example:\n"
 "Selected 10 % = 0,25 kts\n"
 "Range from 2,25 to 2,5 kts"
 msgstr "Voorbeeld: \n"
-"Max. vaart = 2,5 knp\n"
-" Geselecteerd 10% = 0,25 knp\n"
-"Bereik van 2,25 tot 2,5 knp"
+"Max. vaart = 2,5 kn\n"
+" Geselecteerd 10% = 0,25 kn\n"
+"Bereik van 2,25 tot 2,5 kn"
 
 #: src/Polar.cpp:1344
 msgid "Range"
@@ -444,7 +444,7 @@ msgstr "De Journaal PlugIn is niet geinstalleerd.\n"
 
 #: src/PolarGui.h:99
 msgid "Polar Diagram"
-msgstr "Polairdiagram"
+msgstr "Polair-diagram"
 
 #: src/PolarGui.cpp:28
 msgid "Mode:"
@@ -514,7 +514,7 @@ msgstr "GPS"
 msgid "Speedo uses column STW\n"
 "GPS uses column SOG"
 msgstr "Log gebruikt kolom 'Vaart door water'\n"
-"GPS gebruikt kolom 'Vaart over grond'"
+"GPS gebruikt kolom 'Grondvaart'"
 
 #: src/PolarGui.cpp:112
 msgid "Current <"
