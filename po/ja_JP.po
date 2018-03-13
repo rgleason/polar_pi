@@ -3,17 +3,17 @@ msgstr ""
 "Project-Id-Version: opencpn\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-03 14:01-0500\n"
-"PO-Revision-Date: 2015-11-08 22:35-0500\n"
+"PO-Revision-Date: 2018-03-11 10:38-0400\n"
 "Last-Translator: nohal <pavel@kalian.cz>\n"
-"Language-Team: Chinese Traditional\n"
-"Language: zh_TW\n"
+"Language-Team: Japanese\n"
+"Language: ja_JP\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: opencpn\n"
-"X-Crowdin-Language: zh-TW\n"
+"X-Crowdin-Language: ja\n"
 "X-Crowdin-File: /plugins/polar_pi/po/polar_pi.pot\n"
 
 #: src/polar_pi.cpp:120 src/polar_pi.cpp:182 src/polar_pi.cpp:208
@@ -192,7 +192,7 @@ msgstr ""
 
 #: src/Options.cpp:157
 msgid "m/s"
-msgstr ""
+msgstr "m/s"
 
 #: src/Options.cpp:158
 msgid "km/h"
@@ -470,7 +470,7 @@ msgstr ""
 
 #: src/PolarGui.cpp:55
 msgid "Save"
-msgstr ""
+msgstr "保存"
 
 #: src/PolarGui.cpp:58
 msgid "Load"

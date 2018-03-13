@@ -3,17 +3,17 @@ msgstr ""
 "Project-Id-Version: opencpn\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-03 14:01-0500\n"
-"PO-Revision-Date: 2016-02-18 16:08-0500\n"
+"PO-Revision-Date: 2018-01-29 21:28-0500\n"
 "Last-Translator: nohal <pavel@kalian.cz>\n"
-"Language-Team: Spanish\n"
-"Language: es_ES\n"
+"Language-Team: Portuguese\n"
+"Language: pt_PT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: opencpn\n"
-"X-Crowdin-Language: es-ES\n"
+"X-Crowdin-Language: pt-PT\n"
 "X-Crowdin-File: /plugins/polar_pi/po/polar_pi.pot\n"
 
 #: src/polar_pi.cpp:120 src/polar_pi.cpp:182 src/polar_pi.cpp:208
@@ -23,23 +23,23 @@ msgstr "Polar"
 
 #: src/polar_pi.cpp:188
 msgid "Polar PlugIn for OpenCPN"
-msgstr "Plugin Polar para OpenCPN"
+msgstr "Extensão Polar para OpenCPN"
 
 #: src/polar_pi.cpp:194
 msgid "Polar PlugIn for OpenCPN\n"
-msgstr "Plugin Polar para OpenCPN\n"
+msgstr "Extensão Polar para OpenCPN\n"
 
 #: src/polar_pi.cpp:221
 msgid "Polar Preferences"
-msgstr "Preferencias Polar"
+msgstr "Preferências Polar"
 
 #: src/polar_pi.cpp:234
 msgid "Show Polar icon"
-msgstr "Mostrar ícono de Polar"
+msgstr "Mostrar ícone Polar"
 
 #: src/polar_pi.cpp:237
 msgid "Show metres/sec for Wind Speed"
-msgstr "Mostrar metros/segundo para la velocidad del viento"
+msgstr "Mostrar metros/sec para velocidade do Vento"
 
 #: src/Options.cpp:51
 msgid "Ma"
@@ -47,7 +47,7 @@ msgstr "Ma"
 
 #: src/Options.cpp:52
 msgid "Tr"
-msgstr "Verdadero"
+msgstr "Tr"
 
 #: src/Options.cpp:53
 msgid "Ge1"
@@ -99,61 +99,61 @@ msgstr "?"
 
 #: src/Options.cpp:66
 msgid "Main"
-msgstr "Principal"
+msgstr "Grande"
 
 #: src/Options.cpp:67
 msgid "Try"
-msgstr "Probar"
+msgstr "Carangueja"
 
 #: src/Options.cpp:68
 msgid "Genoa 1"
-msgstr "Génova 1"
+msgstr "Genoa 1"
 
 #: src/Options.cpp:69
 msgid "Genoa 2"
-msgstr "Génova 2"
+msgstr "Genoa 2"
 
 #: src/Options.cpp:70
 msgid "Genoa 3"
-msgstr "Génova 3"
+msgstr "Genoa 3"
 
 #: src/Options.cpp:71
 msgid "Fock 1"
-msgstr "Tormentín de mesana"
+msgstr "Fock 1"
 
 #: src/Options.cpp:72
 msgid "Fock 2"
-msgstr "Foque 2"
+msgstr "Fock 2"
 
 #: src/Options.cpp:73
 msgid "Fock 3"
-msgstr "Foque 3"
+msgstr "Fock 3"
 
 #: src/Options.cpp:74
 msgid "Jib"
-msgstr "Foque"
+msgstr "Estai"
 
 #: src/Options.cpp:75
 msgid "Mizzen"
-msgstr "Mesana"
+msgstr "Mezena"
 
 #: src/Options.cpp:76
 msgid "Mizzen Storm"
-msgstr "Tormentín de mesana"
+msgstr "Mezena de tempo"
 
 #: src/Options.cpp:77
 msgid "Staysail"
-msgstr "Trinqueta"
+msgstr "Estai"
 
 #: src/Options.cpp:78
 msgid "Spinnacker"
-msgstr "Spinnaker"
+msgstr "Spinnacker"
 
 #: src/Options.cpp:79
 msgid "You can change the abbreviations and the names of the sails\n"
 "in Options/Miscellaneous/Sails(Logbook)"
-msgstr "Puede cambiar las abreviaturas y los nombres de las velas\n"
-" en Opciones/Misceláneas/Velas(Bitácora)"
+msgstr "Pode mudar os nomes e abreviaturas das velas\n"
+"em Opções/Diversos/Velas(Diário de bordo)"
 
 #: src/Options.cpp:143
 msgid "'"
@@ -165,11 +165,11 @@ msgstr "\""
 
 #: src/Options.cpp:146
 msgid "NM"
-msgstr "MN"
+msgstr "NM"
 
 #: src/Options.cpp:147 src/Options.cpp:156 src/Polar.cpp:1474
 msgid "kts"
-msgstr "nudos"
+msgstr "kts"
 
 #: src/Options.cpp:149
 msgid "m"
@@ -177,7 +177,7 @@ msgstr "m"
 
 #: src/Options.cpp:150
 msgid "ft"
-msgstr "pie"
+msgstr "ft"
 
 #: src/Options.cpp:151
 msgid "fth"
@@ -213,7 +213,7 @@ msgstr "E"
 
 #: src/Options.cpp:168
 msgid "day(s)"
-msgstr "día(s)"
+msgstr "dias(s)"
 
 #: src/Options.cpp:169
 msgid "week(s)"
@@ -221,115 +221,115 @@ msgstr "semana(s)"
 
 #: src/Options.cpp:170
 msgid "month"
-msgstr "mes"
+msgstr "mês"
 
 #: src/Polar.h:192
 msgid "Polar Filter"
-msgstr "Filtro polar"
+msgstr "Filtro Polar"
 
 #: src/Polar.cpp:74
 msgid "Max. only"
-msgstr "Max. sólo"
+msgstr "Somente Maximo"
 
 #: src/Polar.cpp:198
 msgid "Engine started / Recording is stopped"
-msgstr "Motor encendido / Registro detenido"
+msgstr "Motor Arrancou / Gravção parada"
 
 #: src/Polar.cpp:215
 msgid "Select a VDR-File"
-msgstr "Seleccione un archivo VDR"
+msgstr "Seleccionar um ficheiro VDR"
 
 #: src/Polar.cpp:228 src/Polar.cpp:532
 msgid "Please wait."
-msgstr "Por favor, espere."
+msgstr "Aguarde."
 
 #: src/Polar.cpp:228
 msgid "Loading NMEA messages from file "
-msgstr "Cargando mensajes NMEA desde archivo "
+msgstr "A carregar mensagens NMEA do ficheiro "
 
 #: src/Polar.cpp:385
 msgid "less than 3 entries found"
-msgstr "se encontraron menos de 3 entradas"
+msgstr "encontradas menos que 3 registos"
 
 #: src/Polar.cpp:388
 msgid "less than 5 entries found"
-msgstr "se encontraron menos de 5 entradas"
+msgstr "encontradas menos que 5 registos"
 
 #: src/Polar.cpp:391
 msgid "more than 10 entries found"
-msgstr "se encontraron más de 10 entradas"
+msgstr "encontradas mais que 10 registos"
 
 #: src/Polar.cpp:401
 msgid "2kts"
-msgstr "2kts"
+msgstr "2nós"
 
 #: src/Polar.cpp:404
 msgid "4kts"
-msgstr "4kts"
+msgstr "4nós"
 
 #: src/Polar.cpp:407
 msgid "6kts"
-msgstr "6Kts"
+msgstr "6nós"
 
 #: src/Polar.cpp:410
 msgid "8kts"
-msgstr "8kts"
+msgstr "8nós"
 
 #: src/Polar.cpp:413
 msgid "10kts"
-msgstr "10kts"
+msgstr "10nós"
 
 #: src/Polar.cpp:416
 msgid "12kts"
-msgstr "12kts"
+msgstr "12nós"
 
 #: src/Polar.cpp:419
 msgid "14kts"
-msgstr "14kts"
+msgstr "14nós"
 
 #: src/Polar.cpp:422
 msgid "16kts"
-msgstr "16kts"
+msgstr "16nós"
 
 #: src/Polar.cpp:425
 msgid "18kts"
-msgstr "18kts"
+msgstr "18nós"
 
 #: src/Polar.cpp:428
 msgid "20kts"
-msgstr "20kts"
+msgstr "20nós"
 
 #: src/Polar.cpp:431
 msgid "22kts"
-msgstr "22kts"
+msgstr "22nós"
 
 #: src/Polar.cpp:434
 msgid "24kts"
-msgstr "24kts"
+msgstr "24nós"
 
 #: src/Polar.cpp:437
 msgid "26kts"
-msgstr "26kts"
+msgstr "26nós"
 
 #: src/Polar.cpp:440
 msgid "28kts"
-msgstr "28kts"
+msgstr "28nós"
 
 #: src/Polar.cpp:443
 msgid "30kts"
-msgstr "30kts"
+msgstr "30nós"
 
 #: src/Polar.cpp:446
 msgid "32kts"
-msgstr "32kts"
+msgstr "32nós"
 
 #: src/Polar.cpp:449
 msgid "34kts"
-msgstr "34kts"
+msgstr "34nós"
 
 #: src/Polar.cpp:452
 msgid "36kts"
-msgstr "36kts"
+msgstr "36nós"
 
 #: src/Polar.cpp:455
 msgid "38kts"
@@ -341,53 +341,53 @@ msgstr "40kts"
 
 #: src/Polar.cpp:501
 msgid "Filtered by:"
-msgstr "Filtrado según:"
+msgstr "Filtrado por:"
 
 #: src/Polar.cpp:539
 msgid "Collecting: "
-msgstr "Recopilando: "
+msgstr "Recolhendo: "
 
 #: src/Polar.cpp:890
 msgid "Save Polar File"
-msgstr "Guardar archivo Polar"
+msgstr "Gravar ficheiro Polar"
 
 #: src/Polar.cpp:1103
 msgid "Select a Polar-File"
-msgstr "Seleccionar un archivo Polar"
+msgstr "Escolher ficheiro Polar"
 
 #: src/Polar.cpp:1140
 msgid "Cannot load this file"
-msgstr "No se puede cargar este archvo"
+msgstr "Não é possível carregar este ficheiro"
 
 #: src/Polar.cpp:1146
 msgid "Format in this file not recognised"
-msgstr "Formato de archivo no reconocido"
+msgstr "Formatar deste ficheiro não reconhecido"
 
 #: src/Polar.cpp:1313
 msgid "Use Max-Speed only"
-msgstr "Usar velocidad max únicamente"
+msgstr "Usar somente velocidade máxima"
 
 #: src/Polar.cpp:1320
 msgid "Use Average from all speed-data"
-msgstr "Usar promedio de todos los datos de velocidad"
+msgstr "Usar média de todas as velocidades"
 
 #: src/Polar.cpp:1326
 msgid "Range from maximum speed to minus"
-msgstr "Ordenar de velocidad máxima a mínima"
+msgstr "Intervalo de velocidade máxima a mínima"
 
 #: src/Polar.cpp:1327
 msgid "Example:\n"
 "Max-Speed = 2,5 kts\n"
 "Selected 10 % = 0,25 kts\n"
 "Range from 2,25 to 2,5 kts"
-msgstr "Ejemplo:\n"
-"Velocidad-Máxima = 2,5 kts\n"
-"Seleccionado 10% = 0,25 kts\n"
-"Rango de 2,25 a 2,5 kts"
+msgstr "Exemplo:\n"
+"Velocidade máxima = 2,5 nós\n"
+"Seleccionado 10 % = 0,25 nós\n"
+"Intervalo de 2,25 a 2,5 nós"
 
 #: src/Polar.cpp:1344
 msgid "Range"
-msgstr "Alcance"
+msgstr "Alcançe"
 
 #: src/Polar.cpp:1366
 msgid "Sails"
@@ -395,24 +395,24 @@ msgstr "Velas"
 
 #: src/Polar.cpp:1377
 msgid "MyLabel"
-msgstr "MiEtiqueta"
+msgstr "Minha etiqueta"
 
 #: src/Polar.cpp:1391
 msgid "Wavehight"
-msgstr "Wavehight"
+msgstr "Altura da vaga"
 
 #: src/Polar.cpp:1466 src/PolarGui.cpp:87
 msgid "Wind:"
-msgstr "Viento:"
+msgstr "Vento:"
 
 #: src/Polar.cpp:1481
 msgid "Wavehight from"
-msgstr "Altura de las olas desde"
+msgstr "Altura da vaga de"
 
 #: src/Polar.cpp:1486 src/Polar.cpp:1499 src/PolarGui.cpp:91
 #: src/PolarGui.cpp:118
 msgid "any"
-msgstr "cualquiera"
+msgstr "qualquer"
 
 #: src/Polar.cpp:1494
 msgid "to"
@@ -420,11 +420,11 @@ msgstr "a"
 
 #: src/Polar.cpp:1601
 msgid "Collecting Data from: "
-msgstr "Recopilación de datos de: "
+msgstr "Recolhendo dados de: "
 
 #: src/PolarDialog.cpp:38
 msgid "Start"
-msgstr "Inicio"
+msgstr "Começar"
 
 #: src/PolarDialog.cpp:38
 msgid "Stop"
@@ -432,39 +432,39 @@ msgstr "Parar"
 
 #: src/PolarDialog.cpp:40
 msgid "Record "
-msgstr "Grabar "
+msgstr "Gravar "
 
 #: src/PolarDialog.cpp:167
 msgid "The plugin logbookkonni isn't installed\n\n"
 "It's needed to collect wind/speed-data from all available logbooks\n\n"
 "The create-button is hidden and the mode isn't useable"
-msgstr "El plugin logbookkonni no está instalado\n\n"
-"Es necesario para recopilar datos de la velocidad del viento de todos los logbooks disponibles \n\n"
-"El botón Crear está escondido y el modo no es utilizable"
+msgstr "A extensão diário de bordo konni não está instalada\n\n"
+"ÉE necessária para recolher dados de velocidade do vento dos diários de bordo disponíveis\n\n"
+"O butão criar está escondido e o modo invisível"
 
 #: src/PolarGui.h:99
 msgid "Polar Diagram"
-msgstr "Diagrama polar"
+msgstr "Diagrama Polar"
 
 #: src/PolarGui.cpp:28
 msgid "Mode:"
-msgstr "Modo: "
+msgstr "Modo:"
 
 #: src/PolarGui.cpp:32
 msgid "Data from Logbooks"
-msgstr "Datos de las bitácoras"
+msgstr "Dados do diário de bordo"
 
 #: src/PolarGui.cpp:32
 msgid "Data from NMEA"
-msgstr "Datos de NMEA"
+msgstr "Dados do NMEA"
 
 #: src/PolarGui.cpp:32
 msgid "Data from File"
-msgstr "Datos de archivo"
+msgstr "Dados de um ficheiro"
 
 #: src/PolarGui.cpp:32
 msgid "Edit manual"
-msgstr "Editar manual"
+msgstr "Edição manual"
 
 #: src/PolarGui.cpp:38
 msgid "Filter"
@@ -472,7 +472,7 @@ msgstr "Filtro"
 
 #: src/PolarGui.cpp:44
 msgid "Create"
-msgstr "Crear"
+msgstr "Criar"
 
 #: src/PolarGui.cpp:55
 msgid "Save"
@@ -480,31 +480,31 @@ msgstr "Guardar"
 
 #: src/PolarGui.cpp:58
 msgid "Load"
-msgstr "Cargar"
+msgstr "Carregar"
 
 #: src/PolarGui.cpp:63
 msgid "Rings:"
-msgstr "Rings: "
+msgstr "Anéis:"
 
 #: src/PolarGui.cpp:71
 msgid "Set diagramm to x knots"
-msgstr "Establecer diagrama para x nudos"
+msgstr "Configurar diagrama para x nós"
 
 #: src/PolarGui.cpp:75
 msgid "Degrees:"
-msgstr "Grados: "
+msgstr "Graus:"
 
 #: src/PolarGui.cpp:83
 msgid "Calculate speed-bullets for x degrees "
-msgstr "Calcular speed-bullets para x grados "
+msgstr "Calcular marcas de velocidade para x graus "
 
 #: src/PolarGui.cpp:100
 msgid "Source:"
-msgstr "Fuente:"
+msgstr "Fonte:"
 
 #: src/PolarGui.cpp:104
 msgid "Speedo"
-msgstr "Velocímetro"
+msgstr "Speedo"
 
 #: src/PolarGui.cpp:104
 msgid "GPS"
@@ -513,18 +513,18 @@ msgstr "GPS"
 #: src/PolarGui.cpp:108
 msgid "Speedo uses column STW\n"
 "GPS uses column SOG"
-msgstr "El velocímetro utiliza columnas STW\n"
-"GPS utiliza columna SOG"
+msgstr "Speedo usa a coluna STW\n"
+"GPS ua a coluna SOG"
 
 #: src/PolarGui.cpp:112
 msgid "Current <"
-msgstr "Corriente < "
+msgstr "Corrente <"
 
 #: src/PolarGui.cpp:250
 msgid "Clear Data"
-msgstr "Limpiar datos"
+msgstr "Limpar dados"
 
 #: src/PolarGui.cpp:253
 msgid "Record Start"
-msgstr "Inicio de registro"
+msgstr "Começar gravação"
 

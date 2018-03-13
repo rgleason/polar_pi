@@ -3,147 +3,147 @@ msgstr ""
 "Project-Id-Version: opencpn\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-03 14:01-0500\n"
-"PO-Revision-Date: 2016-02-26 09:18-0500\n"
+"PO-Revision-Date: 2018-03-11 10:38-0400\n"
 "Last-Translator: nohal <pavel@kalian.cz>\n"
-"Language-Team: Vietnamese\n"
-"Language: vi_VN\n"
+"Language-Team: Indonesian\n"
+"Language: id_ID\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: opencpn\n"
-"X-Crowdin-Language: vi\n"
+"X-Crowdin-Language: id\n"
 "X-Crowdin-File: /plugins/polar_pi/po/polar_pi.pot\n"
 
 #: src/polar_pi.cpp:120 src/polar_pi.cpp:182 src/polar_pi.cpp:208
 #: src/polar_pi.cpp:230 src/polar_pi.cpp:259
 msgid "Polar"
-msgstr ""
+msgstr "Kutub"
 
 #: src/polar_pi.cpp:188
 msgid "Polar PlugIn for OpenCPN"
-msgstr ""
+msgstr "Aplikasi tambahan Polar untuk OpenCPN"
 
 #: src/polar_pi.cpp:194
 msgid "Polar PlugIn for OpenCPN\n"
-msgstr ""
+msgstr "Aplikasi tambahan Polar untuk OpenCPN\n"
 
 #: src/polar_pi.cpp:221
 msgid "Polar Preferences"
-msgstr ""
+msgstr "Pilihan kutub"
 
 #: src/polar_pi.cpp:234
 msgid "Show Polar icon"
-msgstr ""
+msgstr "Tampilkan ikon Kutub"
 
 #: src/polar_pi.cpp:237
 msgid "Show metres/sec for Wind Speed"
-msgstr ""
+msgstr "Menampilkan meter/detik untuk kecepatan angin"
 
 #: src/Options.cpp:51
 msgid "Ma"
-msgstr ""
+msgstr "Ma"
 
 #: src/Options.cpp:52
 msgid "Tr"
-msgstr ""
+msgstr "Tr"
 
 #: src/Options.cpp:53
 msgid "Ge1"
-msgstr ""
+msgstr "Ge1"
 
 #: src/Options.cpp:54
 msgid "Ge2"
-msgstr ""
+msgstr "Ge2"
 
 #: src/Options.cpp:55
 msgid "Ge3"
-msgstr ""
+msgstr "Ge3"
 
 #: src/Options.cpp:56
 msgid "Fo1"
-msgstr ""
+msgstr "Fo1"
 
 #: src/Options.cpp:57
 msgid "Fo2"
-msgstr ""
+msgstr "Fo2"
 
 #: src/Options.cpp:58
 msgid "Fo3"
-msgstr ""
+msgstr "Fo3"
 
 #: src/Options.cpp:59
 msgid "Ji"
-msgstr ""
+msgstr "Ji"
 
 #: src/Options.cpp:60
 msgid "Mi"
-msgstr ""
+msgstr "Mi"
 
 #: src/Options.cpp:61
 msgid "Mt"
-msgstr ""
+msgstr "Mt"
 
 #: src/Options.cpp:62
 msgid "St"
-msgstr ""
+msgstr "St"
 
 #: src/Options.cpp:63
 msgid "Sp"
-msgstr ""
+msgstr "Sp"
 
 #: src/Options.cpp:64
 msgid "?"
-msgstr ""
+msgstr "?"
 
 #: src/Options.cpp:66
 msgid "Main"
-msgstr ""
+msgstr "Utama"
 
 #: src/Options.cpp:67
 msgid "Try"
-msgstr ""
+msgstr "Mencoba"
 
 #: src/Options.cpp:68
 msgid "Genoa 1"
-msgstr ""
+msgstr "Genoa 1"
 
 #: src/Options.cpp:69
 msgid "Genoa 2"
-msgstr ""
+msgstr "Genoa 2"
 
 #: src/Options.cpp:70
 msgid "Genoa 3"
-msgstr ""
+msgstr "Genoa 3"
 
 #: src/Options.cpp:71
 msgid "Fock 1"
-msgstr ""
+msgstr "Fock 1"
 
 #: src/Options.cpp:72
 msgid "Fock 2"
-msgstr ""
+msgstr "Fock 2"
 
 #: src/Options.cpp:73
 msgid "Fock 3"
-msgstr ""
+msgstr "Fock 3"
 
 #: src/Options.cpp:74
 msgid "Jib"
-msgstr ""
+msgstr "Jib"
 
 #: src/Options.cpp:75
 msgid "Mizzen"
-msgstr ""
+msgstr "Mizzen"
 
 #: src/Options.cpp:76
 msgid "Mizzen Storm"
-msgstr ""
+msgstr "Badai demam"
 
 #: src/Options.cpp:77
 msgid "Staysail"
-msgstr ""
+msgstr "Tetap berlayar"
 
 #: src/Options.cpp:78
 msgid "Spinnacker"
@@ -152,372 +152,379 @@ msgstr ""
 #: src/Options.cpp:79
 msgid "You can change the abbreviations and the names of the sails\n"
 "in Options/Miscellaneous/Sails(Logbook)"
-msgstr ""
+msgstr "Anda dapat mengubah singkatan dan nama layar\n"
+" di Options / Miscellaneous / Sails (Logbook)"
 
 #: src/Options.cpp:143
 msgid "'"
-msgstr ""
+msgstr "'"
 
 #: src/Options.cpp:144
 msgid "\""
-msgstr ""
+msgstr "\""
 
 #: src/Options.cpp:146
 msgid "NM"
-msgstr ""
+msgstr "NM"
 
 #: src/Options.cpp:147 src/Options.cpp:156 src/Polar.cpp:1474
 msgid "kts"
-msgstr ""
+msgstr "kts"
 
 #: src/Options.cpp:149
 msgid "m"
-msgstr ""
+msgstr "m"
 
 #: src/Options.cpp:150
 msgid "ft"
-msgstr ""
+msgstr "ft"
 
 #: src/Options.cpp:151
 msgid "fth"
-msgstr ""
+msgstr "fth"
 
 #: src/Options.cpp:154
 msgid "mb"
-msgstr ""
+msgstr "mb"
 
 #: src/Options.cpp:155
 msgid "F"
-msgstr ""
+msgstr "F"
 
 #: src/Options.cpp:157
 msgid "m/s"
-msgstr ""
+msgstr "m/s"
 
 #: src/Options.cpp:158
 msgid "km/h"
-msgstr ""
+msgstr "km/h"
 
 #: src/Options.cpp:161
 msgid "gal"
-msgstr ""
+msgstr "gal"
 
 #: src/Options.cpp:162
 msgid "h"
-msgstr ""
+msgstr "h"
 
 #: src/Options.cpp:163
 msgid "E"
-msgstr ""
+msgstr "E"
 
 #: src/Options.cpp:168
 msgid "day(s)"
-msgstr ""
+msgstr "hari(s)"
 
 #: src/Options.cpp:169
 msgid "week(s)"
-msgstr ""
+msgstr "minggu(s)"
 
 #: src/Options.cpp:170
 msgid "month"
-msgstr ""
+msgstr "bulan"
 
 #: src/Polar.h:192
 msgid "Polar Filter"
-msgstr ""
+msgstr "Filter Polar"
 
 #: src/Polar.cpp:74
 msgid "Max. only"
-msgstr ""
+msgstr "Maks. hanya"
 
 #: src/Polar.cpp:198
 msgid "Engine started / Recording is stopped"
-msgstr ""
+msgstr "Mesin dihidupkan/Perekaman dihentikan"
 
 #: src/Polar.cpp:215
 msgid "Select a VDR-File"
-msgstr ""
+msgstr "Pilih VDR-Berkas"
 
 #: src/Polar.cpp:228 src/Polar.cpp:532
 msgid "Please wait."
-msgstr ""
+msgstr "Mohon tunggu."
 
 #: src/Polar.cpp:228
 msgid "Loading NMEA messages from file "
-msgstr ""
+msgstr "Memuat pesan NMEA dari file "
 
 #: src/Polar.cpp:385
 msgid "less than 3 entries found"
-msgstr ""
+msgstr "kurang dari 3 entri yang ditemukan"
 
 #: src/Polar.cpp:388
 msgid "less than 5 entries found"
-msgstr ""
+msgstr "kurang daripada 5 entri yang ditemukan"
 
 #: src/Polar.cpp:391
 msgid "more than 10 entries found"
-msgstr ""
+msgstr "lebih dari 10 entri yang ditemukan"
 
 #: src/Polar.cpp:401
 msgid "2kts"
-msgstr ""
+msgstr "2kts"
 
 #: src/Polar.cpp:404
 msgid "4kts"
-msgstr ""
+msgstr "4kts"
 
 #: src/Polar.cpp:407
 msgid "6kts"
-msgstr ""
+msgstr "6kts"
 
 #: src/Polar.cpp:410
 msgid "8kts"
-msgstr ""
+msgstr "8kts"
 
 #: src/Polar.cpp:413
 msgid "10kts"
-msgstr ""
+msgstr "10kts"
 
 #: src/Polar.cpp:416
 msgid "12kts"
-msgstr ""
+msgstr "12kts"
 
 #: src/Polar.cpp:419
 msgid "14kts"
-msgstr ""
+msgstr "14kts"
 
 #: src/Polar.cpp:422
 msgid "16kts"
-msgstr ""
+msgstr "16kts"
 
 #: src/Polar.cpp:425
 msgid "18kts"
-msgstr ""
+msgstr "18kts"
 
 #: src/Polar.cpp:428
 msgid "20kts"
-msgstr ""
+msgstr "20kts"
 
 #: src/Polar.cpp:431
 msgid "22kts"
-msgstr ""
+msgstr "22kts"
 
 #: src/Polar.cpp:434
 msgid "24kts"
-msgstr ""
+msgstr "24kts"
 
 #: src/Polar.cpp:437
 msgid "26kts"
-msgstr ""
+msgstr "26kts"
 
 #: src/Polar.cpp:440
 msgid "28kts"
-msgstr ""
+msgstr "28kts"
 
 #: src/Polar.cpp:443
 msgid "30kts"
-msgstr ""
+msgstr "30kts"
 
 #: src/Polar.cpp:446
 msgid "32kts"
-msgstr ""
+msgstr "32kts"
 
 #: src/Polar.cpp:449
 msgid "34kts"
-msgstr ""
+msgstr "34kts"
 
 #: src/Polar.cpp:452
 msgid "36kts"
-msgstr ""
+msgstr "36kts"
 
 #: src/Polar.cpp:455
 msgid "38kts"
-msgstr ""
+msgstr "38kts"
 
 #: src/Polar.cpp:458
 msgid "40kts"
-msgstr ""
+msgstr "40kts"
 
 #: src/Polar.cpp:501
 msgid "Filtered by:"
-msgstr ""
+msgstr "Disaring oleh:"
 
 #: src/Polar.cpp:539
 msgid "Collecting: "
-msgstr ""
+msgstr "Mengumpulkan: "
 
 #: src/Polar.cpp:890
 msgid "Save Polar File"
-msgstr ""
+msgstr "Menyimpan File Polar"
 
 #: src/Polar.cpp:1103
 msgid "Select a Polar-File"
-msgstr ""
+msgstr "Pilih Polar-File"
 
 #: src/Polar.cpp:1140
 msgid "Cannot load this file"
-msgstr ""
+msgstr "Tidak dapat memuat berkas ini"
 
 #: src/Polar.cpp:1146
 msgid "Format in this file not recognised"
-msgstr ""
+msgstr "Format dalam berkas ini tidak sah"
 
 #: src/Polar.cpp:1313
 msgid "Use Max-Speed only"
-msgstr ""
+msgstr "Gunakan Maks-Kecepatan ​​saja"
 
 #: src/Polar.cpp:1320
 msgid "Use Average from all speed-data"
-msgstr ""
+msgstr "Gunakan Rata-rata dari semua data kecepatan"
 
 #: src/Polar.cpp:1326
 msgid "Range from maximum speed to minus"
-msgstr ""
+msgstr "Rentang dari kecepatan maksimal menjadi minus"
 
 #: src/Polar.cpp:1327
 msgid "Example:\n"
 "Max-Speed = 2,5 kts\n"
 "Selected 10 % = 0,25 kts\n"
 "Range from 2,25 to 2,5 kts"
-msgstr ""
+msgstr "Contoh:\n"
+"Maksimal-Kecepatan = 2,5 kts\n"
+"Dipilih 10 % = 0,25 kts\n"
+"dari Rentang 2,25 sampai 2,5 kts"
 
 #: src/Polar.cpp:1344
 msgid "Range"
-msgstr ""
+msgstr "Jarak"
 
 #: src/Polar.cpp:1366
 msgid "Sails"
-msgstr ""
+msgstr "Layar"
 
 #: src/Polar.cpp:1377
 msgid "MyLabel"
-msgstr ""
+msgstr "Label saya"
 
 #: src/Polar.cpp:1391
 msgid "Wavehight"
-msgstr ""
+msgstr "Tinggi gelombang"
 
 #: src/Polar.cpp:1466 src/PolarGui.cpp:87
 msgid "Wind:"
-msgstr ""
+msgstr "Angin:"
 
 #: src/Polar.cpp:1481
 msgid "Wavehight from"
-msgstr ""
+msgstr "Tinggi gelombang dari"
 
 #: src/Polar.cpp:1486 src/Polar.cpp:1499 src/PolarGui.cpp:91
 #: src/PolarGui.cpp:118
 msgid "any"
-msgstr ""
+msgstr "apa saja"
 
 #: src/Polar.cpp:1494
 msgid "to"
-msgstr ""
+msgstr "untuk"
 
 #: src/Polar.cpp:1601
 msgid "Collecting Data from: "
-msgstr ""
+msgstr "Mengumpulkan Data dari: "
 
 #: src/PolarDialog.cpp:38
 msgid "Start"
-msgstr ""
+msgstr "Mulai"
 
 #: src/PolarDialog.cpp:38
 msgid "Stop"
-msgstr ""
+msgstr "Berhenti"
 
 #: src/PolarDialog.cpp:40
 msgid "Record "
-msgstr ""
+msgstr "Merekam "
 
 #: src/PolarDialog.cpp:167
 msgid "The plugin logbookkonni isn't installed\n\n"
 "It's needed to collect wind/speed-data from all available logbooks\n\n"
 "The create-button is hidden and the mode isn't useable"
-msgstr ""
+msgstr "Aplikasi tambahan logbookkonni tidak terpasang\n\n"
+"Aplikasi tambahan itu diperlukan untuk mengumpulkan data angin/kecepatan dari semua buku catatan yang tersedia\n\n"
+"Tombol buat disembunyikan dan mode tidak dapat digunakan"
 
 #: src/PolarGui.h:99
 msgid "Polar Diagram"
-msgstr ""
+msgstr "Diagram kutub"
 
 #: src/PolarGui.cpp:28
 msgid "Mode:"
-msgstr ""
+msgstr "Mode:"
 
 #: src/PolarGui.cpp:32
 msgid "Data from Logbooks"
-msgstr ""
+msgstr "Data dari buku catatan"
 
 #: src/PolarGui.cpp:32
 msgid "Data from NMEA"
-msgstr ""
+msgstr "Data dari NMEA"
 
 #: src/PolarGui.cpp:32
 msgid "Data from File"
-msgstr ""
+msgstr "Data dari File"
 
 #: src/PolarGui.cpp:32
 msgid "Edit manual"
-msgstr ""
+msgstr "Edit manual"
 
 #: src/PolarGui.cpp:38
 msgid "Filter"
-msgstr ""
+msgstr "Menyaring"
 
 #: src/PolarGui.cpp:44
 msgid "Create"
-msgstr ""
+msgstr "Buat"
 
 #: src/PolarGui.cpp:55
 msgid "Save"
-msgstr ""
+msgstr "Simpan"
 
 #: src/PolarGui.cpp:58
 msgid "Load"
-msgstr ""
+msgstr "Memuat"
 
 #: src/PolarGui.cpp:63
 msgid "Rings:"
-msgstr ""
+msgstr "Cincin:"
 
 #: src/PolarGui.cpp:71
 msgid "Set diagramm to x knots"
-msgstr ""
+msgstr "Set diagramm untuk x knot"
 
 #: src/PolarGui.cpp:75
 msgid "Degrees:"
-msgstr ""
+msgstr "Derajat:"
 
 #: src/PolarGui.cpp:83
 msgid "Calculate speed-bullets for x degrees "
-msgstr ""
+msgstr "Hitung peluru kecepatan untuk x derajat "
 
 #: src/PolarGui.cpp:100
 msgid "Source:"
-msgstr ""
+msgstr "Sumber:"
 
 #: src/PolarGui.cpp:104
 msgid "Speedo"
-msgstr ""
+msgstr "Penghitung kecepatan"
 
 #: src/PolarGui.cpp:104
 msgid "GPS"
-msgstr ""
+msgstr "GPS"
 
 #: src/PolarGui.cpp:108
 msgid "Speedo uses column STW\n"
 "GPS uses column SOG"
-msgstr ""
+msgstr "Speedo menggunakan kolom STW\n"
+" GPS menggunakan kolom SOG"
 
 #: src/PolarGui.cpp:112
 msgid "Current <"
-msgstr ""
+msgstr "Saat ini <"
 
 #: src/PolarGui.cpp:250
 msgid "Clear Data"
-msgstr ""
+msgstr "Hapus data"
 
 #: src/PolarGui.cpp:253
 msgid "Record Start"
-msgstr ""
+msgstr "Rekam Mulai"
 
