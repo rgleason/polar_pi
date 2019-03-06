@@ -1,3 +1,4 @@
+version: 0.9.{build}
 clone_folder: c:\project\polar_pi
 shallow_clone: true
 image:
@@ -5,7 +6,7 @@ image:
 
 platform: 
 # - x64
-- Win32
+  - Win32
 
 configuration: Release
 test: OFF
@@ -29,7 +30,7 @@ install:
   - ps: Start-FileDownload http://opencpn.navnux.org/build_deps/wxWidgets-3.1.2.7z
   - cmd: 7z x wxWidgets-3.1.2.7z -o%WXWIN% > null
 
-   #- set #Use only while debugging - it reveals the deploy token set on Appveyor
+  #- set #Use only while debugging - it reveals the deploy token set on Appveyor
 
 before_build:
   - cd c:\project\polar_pi
@@ -44,16 +45,16 @@ build_script:
   - cmake --build . --config Release --target package
 
 artifacts:
-  - path: 'build\*.exe'
+  - path: build\polar_pi*.exe
     name: installer
 
 deploy:
-  description: 'release created by AppVeyor CI'
-  provider: GitHub
-  auth_token: '%GitHub_auth_token%'
-  artifact: installer
-  draft: true
-  prerelease: true
-  on:
-    appveyor_repo_tag: true # deploy on tag push only
-    configuration: Release  # Debug contains non-redist MS DLLs
+   description: 'release created by AppVeyor CI'
+   provider: GitHub
+   auth_token: '%GitHub_auth_token%'
+   artifact: installer
+   draft: true
+   prerelease: true
+   on:
+      appveyor_repo_tag: true # deploy on tag push only
+      configuration: Release  # Debug contains non-redist MS DLLs
