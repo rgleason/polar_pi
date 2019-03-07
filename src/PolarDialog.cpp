@@ -191,7 +191,7 @@ void PolarDialog::OnGridCellChange( wxGridEvent& event )
 			s.Replace(_T("."),_T(","));
 
 /*       m_gridEdit->SetCellValue(s,event.GetRow(),event.GetCol()); */
-         m_gridEdit->SetCellValue(event.GetNumberRows(),event.GetNumberCols(), s);
+		 m_gridEdit->SetCellValue(s,event.GetRow(),event.GetCol());
 	}
 	event.Skip();
 }
