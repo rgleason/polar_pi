@@ -256,7 +256,11 @@ endif(PI_JSON_SCHEMA_VALIDATOR)
 #include_directories(BEFORE ${PROJECT_SOURCE_DIR}/ocpninclude/wxcurl/include)
 #include_directories(BEFORE ${PROJECT_SOURCE_DIR}/ocpnsrc/lz4)
 #include_directories(BEFORE ${PROJECT_SOURCE_DIR}/ocpnsrc/bitmaps)
-
+#include_directories(BEFORE ${PROJECT_SOURCE_DIR}/ocpnsrc/lz4)
+#include_directories(BEFORE ${PROJECT_SOURCE_DIR}/ocpnsrc/bitmaps)
+#include_directories(BEFORE ${PROJECT_SOURCE_DIR}/src)
+include_directories(BEFORE ${PROJECT_SOURCE_DIR}/src/nmea0183)
+include_directories(BEFORE ${PROJECT_SOURCE_DIR}/api-16)
 ##
 ## Statement below is required to collect all the set( headers and SRCS  - Adjust as required
 ## This add_library  can be used in conditionals below.
