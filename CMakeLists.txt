@@ -264,7 +264,9 @@ endif(PI_JSON_SCHEMA_VALIDATOR)
 ##    SET(EXTSRC  ${EXTSRC}   etc   Can be in an if statement as below
 ##
 
-add_library(${PACKAGE_NAME} SHARED ${SRCS} ${HDRS} ${OCPNSRC} ${EXTSRC} ${LIBSSRC})
+# add_library(${PACKAGE_NAME} SHARED ${SRCS} ${HDRS} ${OCPNSRC} ${EXTSRC} ${LIBSSRC})
+
+ADD_LIBRARY(${PACKAGE_NAME} SHARED ${SRC_POLAR} ${SRC_LNMEA0183})
 
 add_definitions(-DTIXML_USE_STL)
 
@@ -304,8 +306,7 @@ endif(UNIX AND NOT APPLE)
 ## ----- do not change next section - needed to configure build process ----- ##
 ##
 
-ADD_DEFINITIONS(-DTIXML_USE_STL)
-ADD_LIBRARY(${PACKAGE_NAME} SHARED ${SRC_POLAR} ${SRC_LNMEA0183})
+
 
 include("cmake/PluginInstall.cmake")
 include("cmake/PluginLocalization.cmake")
