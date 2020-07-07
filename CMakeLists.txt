@@ -4,15 +4,13 @@
 ## License:     wxWidgets License
 ##---------------------------------------------------------------------------
 # Frontend2 Author: Jon Gough  
-# Frontend2: v1.0.124
+# Frontend2: v1.0.125
 # ---------------------------------------------------------------------------
 ## ----- When changing this file do NOT change the order in which sections occur        ----- ##
 ## ----- Changes should only be made between the section blocks that identify where     ----- ##
 ## ----- these changes should be. The whole configuration process relies on this        ----- ##
 ## ----- sequence to be successful                                                      ----- ##
 ##  
-
-##
 ##----- Modify section below to include all the details for your plugin ----- ##
 ##
 
@@ -40,9 +38,9 @@ set(PACKAGE "polar")
 
 set(VERSION_MAJOR "1")
 set(VERSION_MINOR "1")
-set(VERSION_PATCH "008")
+set(VERSION_PATCH "9")
 set(VERSION_TWEAK "0")
-set(VERSION_DATE "2017-07-06")
+set(VERSION_DATE "2017-07-07")
 set(OCPN_MIN_VERSION "ov50")
 set(OCPN_API_VERSION_MAJOR "1")
 set(OCPN_API_VERSION_MINOR "16")
@@ -79,9 +77,6 @@ set(XML_DESCRIPTION "testplugin Plugin is used to test out the ODraw API and dem
 
 ##
 ## ----- Modify section above to include all the details for your plugin ----- ##
-##
-
-##
 ## ----- Modify section below if there are special requirements for the plugin ----- ##
 ##
 
@@ -114,9 +109,6 @@ include("cmake/PluginSetup.cmake")
 
 ##
 ## ----- The above is used to setup standard variables that are required by the CMAKE process - do not remove ----- ##
-##
-
-##
 ## ----- Modify section below if there are special requirements for the plugin ----- ##
 ##
 
@@ -126,9 +118,6 @@ option(Plugin_CXX11 "Use c++11" OFF)
 
 ##
 ## ----- Modify section above if there are special requirements for the plugin ----- ##
-##
-
-##
 ## ----- do not change next section - needed to configure build process ----- ##
 ##
 
@@ -136,9 +125,6 @@ include("cmake/PluginConfigure.cmake")
 
 ##
 ## ----- do not change section above - needed to configure build process ----- ##
-##
-
-#
 # ----- Change below to match project requirements for source, headers, etc. ----- ##
 #
 
@@ -247,18 +233,6 @@ endif(PI_JSON_SCHEMA_VALIDATOR)
 ##
 # Modify/configure 'Include' Directories below for the Plugin
 ##
-
-#include_directories(BEFORE ${PROJECT_SOURCE_DIR}/ocpninclude)
-#include_directories(BEFORE ${PROJECT_SOURCE_DIR}/extinclude)
-#include_directories(BEFORE ${PROJECT_SOURCE_DIR}/libs/)
-#include_directories(BEFORE ${PROJECT_SOURCE_DIR}/libs/wx/include)
-#include_directories(BEFORE ${PROJECT_SOURCE_DIR}/ocpninclude/wxcurl)
-#include_directories(BEFORE ${PROJECT_SOURCE_DIR}/ocpninclude/wxcurl/include)
-#include_directories(BEFORE ${PROJECT_SOURCE_DIR}/ocpnsrc/lz4)
-#include_directories(BEFORE ${PROJECT_SOURCE_DIR}/ocpnsrc/bitmaps)
-#include_directories(BEFORE ${PROJECT_SOURCE_DIR}/ocpnsrc/lz4)
-#include_directories(BEFORE ${PROJECT_SOURCE_DIR}/ocpnsrc/bitmaps)
-#include_directories(BEFORE ${PROJECT_SOURCE_DIR}/src)
 include_directories(BEFORE ${PROJECT_SOURCE_DIR}/src/nmea0183)
 include_directories(BEFORE ${PROJECT_SOURCE_DIR}/api-16)
 ##
@@ -297,25 +271,17 @@ if(UNIX AND NOT APPLE)
     endif(PI_JSON_SCHEMA_VALIDATOR)
 endif(UNIX AND NOT APPLE)
 
-
 #These are NOT used in Testplugin, used for other plugins
 #include("cmake/PluginJSON.cmake")
 #include("cmake/PluginXML.cmake")
 #include("cmake/PluginGL.cmake")
 ##
 ## ----- Change above to match project requirements ----- ##
-##
-
-##
 ## ----- do not change next section - needed to configure build process ----- ##
 ##
-
-
-
 include("cmake/PluginInstall.cmake")
 include("cmake/PluginLocalization.cmake")
 include("cmake/PluginPackage.cmake")
-
 
 ##
 ## ----- do not change section above - needed to configure build process ----- ##
