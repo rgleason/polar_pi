@@ -60,7 +60,6 @@ set(PROD "prod")    #Standard Repos
 set(BETA "beta")    #Standard Repos
 set(ALPHA "alpha")  #Standard Repos
 
-# Set if your cloudsmith repository name does not match your git repository name set(CLOUDSMITH_BASE_REPOSITORY "testplugin_pi")
 #set(CLOUDSMITH_USER "jon-gough")
 #set(CLOUDSMITH_USER "rick-gleason")
 set(CLOUDSMITH_USER "opencpn")
@@ -71,9 +70,9 @@ set(CLOUDSMITH_USER "opencpn")
 # set(CLOUDSMITH_BASE_REPOSITORY "opencpn-plugins") #Rick's customization
 set (CLOUDSMITH_BASE_REPOSITORY "polar")  #without the pi 
 
-set(XML_INFO_URL "https://opencpn.org/wiki/dokuwiki/doku.php?id=opencpn:opencpn_user_manual:plugins:safety:odraw1.6_pi")
-set(XML_SUMMARY "Plugin to test examples of the ODAPI and JSON interface for ODRAW 1234#")
-set(XML_DESCRIPTION "testplugin Plugin is used to test out the ODraw API and demonstrate how to use it successfully from another plugin")
+set(XML_INFO_URL "https://opencpn.org/OpenCPN/plugins/polar.html")
+set(XML_SUMMARY "Polar Plugin handles Polar files for Weather Route Predictions")
+set(XML_DESCRIPTION "Polar Plugin is used to read, create and edit, Boat Polar Files")
 
 ##
 ## ----- Modify section above to include all the details for your plugin ----- ##
