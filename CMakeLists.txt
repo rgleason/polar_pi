@@ -282,6 +282,7 @@ endif(UNIX AND NOT APPLE)
 include("cmake/PluginInstall.cmake")
 include("cmake/PluginLocalization.cmake")
 include("cmake/PluginPackage.cmake")
+
 ##
 ## ----- do not change section above - needed to configure build process ----- ##
 ##
