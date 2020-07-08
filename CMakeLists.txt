@@ -34,7 +34,7 @@ set(VERBOSE_NAME "Polar")
 set(COMMON_NAME "Polar")  # Search "getcommonname"in <plugin_pi>.cpp
 set(TITLE_NAME "Polar")
 set(PACKAGE_CONTACT "Peter Tulp")
-set(PACKAGE "polar")
+set(PACKAGE "Polar")
 
 set(VERSION_MAJOR "1")
 set(VERSION_MINOR "1")
@@ -79,7 +79,7 @@ set(XML_DESCRIPTION "Polar Plugin is used to read, create and edit, Boat Polar F
 ## ----- Modify section below if there are special requirements for the plugin ----- ##
 ##
 
-#option(PLUGIN_USE_SVG "Use SVG graphics" OFF)
+#option(PLUGIN_USE_SVG "Use SVG graphics" OFF)   #Commented out to fix icon showing
 
 set(CMAKE_CXX_STANDARD 11)
 
