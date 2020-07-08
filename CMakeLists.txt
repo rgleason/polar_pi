@@ -31,14 +31,14 @@ endif(COMMAND cmake_policy)
 
 # define plugin name, owner and versions
 set(VERBOSE_NAME "Polar")
-set(COMMON_NAME "polar")  # Search "getcommonname"in <plugin_pi>.cpp
-set(TITLE_NAME "polar")
+set(COMMON_NAME "Polar")  # Search "getcommonname"in <plugin_pi>.cpp
+set(TITLE_NAME "Polar")
 set(PACKAGE_CONTACT "Peter Tulp")
 set(PACKAGE "polar")
 
 set(VERSION_MAJOR "1")
 set(VERSION_MINOR "1")
-set(VERSION_PATCH "11")
+set(VERSION_PATCH "12")
 set(VERSION_TWEAK "0")
 set(VERSION_DATE "2017-07-07")
 set(OCPN_MIN_VERSION "ov50")
@@ -79,7 +79,7 @@ set(XML_DESCRIPTION "Polar Plugin is used to read, create and edit, Boat Polar F
 ## ----- Modify section below if there are special requirements for the plugin ----- ##
 ##
 
-option(PLUGIN_USE_SVG "Use SVG graphics" ON)
+#option(PLUGIN_USE_SVG "Use SVG graphics" OFF)
 
 set(CMAKE_CXX_STANDARD 11)
 

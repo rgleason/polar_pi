@@ -153,12 +153,12 @@ void polar_pi::SetPluginMessage(wxString &message_id, wxString &message_body)
 
 int polar_pi::GetAPIVersionMajor()
 {
-      return MY_API_VERSION_MAJOR;
+      return OCPN_API_VERSION_MAJOR;
 }
 
 int polar_pi::GetAPIVersionMinor()
 {
-      return MY_API_VERSION_MINOR;
+      return OCPN_API_VERSION_MINOR;
 }
 
 int polar_pi::GetPlugInVersionMajor()
@@ -178,7 +178,9 @@ wxBitmap *polar_pi::GetPlugInBitmap()
 
 wxString polar_pi::GetCommonName()
 {
-      return _("Polar");
+      //return _("Polar");
+	  
+	 return _T(PLUGIN_COMMON_NAME); 
 }
 
 
