@@ -4,7 +4,7 @@
 ## License:     wxWidgets License
 ##---------------------------------------------------------------------------
 # Frontend2 Author: Jon Gough  
-# Frontend2: v1.0.125
+# Frontend2: v1.0.127
 # ---------------------------------------------------------------------------
 ## ----- When changing this file do NOT change the order in which sections occur        ----- ##
 ## ----- Changes should only be made between the section blocks that identify where     ----- ##
@@ -35,12 +35,14 @@ set(COMMON_NAME "Polar")  # Search "getcommonname"in <plugin_pi>.cpp
 set(TITLE_NAME "Polar")
 set(PACKAGE_CONTACT "Peter Tulp")
 set(PACKAGE "Polar")
+set(SHORT_DESCRIPTION "Polar Plugin handles Polar files for Weather Route Predictions")
+set(LONG_DESCRIPTION "Polar Plugin is used to read, create and edit, Boat Polar Files")
 
 set(VERSION_MAJOR "1")
 set(VERSION_MINOR "1")
-set(VERSION_PATCH "12")
+set(VERSION_PATCH "13")
 set(VERSION_TWEAK "0")
-set(VERSION_DATE "2017-07-07")
+set(VERSION_DATE "2017-07-20")
 set(OCPN_MIN_VERSION "ov50")
 set(OCPN_API_VERSION_MAJOR "1")
 set(OCPN_API_VERSION_MINOR "16")
@@ -65,21 +67,19 @@ set(ALPHA "alpha")  #Standard Repos
 set(CLOUDSMITH_USER "opencpn")
 
 # Set if yourCloudsmith Base Repository name does not match your Git Repository name.
-# set(CLOUDSMITH_BASE_REPOSITORY "testplugin_pi")
-# set(CLOUDSMITH_BASE_REPOSITORY "squiddio")  # Mauro's customization without the '_pi'
 # set(CLOUDSMITH_BASE_REPOSITORY "opencpn-plugins") #Rick's customization
 set (CLOUDSMITH_BASE_REPOSITORY "polar")  #without the pi 
 
 set(XML_INFO_URL "https://opencpn.org/OpenCPN/plugins/polar.html")
-set(XML_SUMMARY "Polar Plugin handles Polar files for Weather Route Predictions")
-set(XML_DESCRIPTION "Polar Plugin is used to read, create and edit, Boat Polar Files")
+set(XML_SUMMARY ${SHORT_DESCRIPTION})
+set(XML_DESCRIPTION ${LONG_DESCRIPTION})
 
 ##
 ## ----- Modify section above to include all the details for your plugin ----- ##
 ## ----- Modify section below if there are special requirements for the plugin ----- ##
 ##
 
-#option(PLUGIN_USE_SVG "Use SVG graphics" OFF)   #Commented out to fix icon showing
+#option(PLUGIN_USE_SVG "Use SVG graphics" ON)   #Commented out to fix icon showing
 
 set(CMAKE_CXX_STANDARD 11)
 
@@ -104,7 +104,7 @@ message(STATUS "${CMLOC}Build type: ${CMAKE_BUILD_TYPE}")
 
 project(${PACKAGE})
 
-include("cmake/PluginSetup.cmake")
+include("PluginSetup")
 
 ##
 ## ----- The above is used to setup standard variables that are required by the CMAKE process - do not remove ----- ##
@@ -120,7 +120,7 @@ option(Plugin_CXX11 "Use c++11" OFF)
 ## ----- do not change next section - needed to configure build process ----- ##
 ##
 
-include("cmake/PluginConfigure.cmake")
+include("PluginConfigure")
 
 ##
 ## ----- do not change section above - needed to configure build process ----- ##
@@ -142,15 +142,16 @@ SET(SRC_POLAR
             src/Polar.cpp
             src/icons.h 
             src/icons.cpp
-	    src/jsonreader.h
-	    src/jsonreader.cpp
-	    src/jsonwriter.h
-	    src/jsonwriter.cpp
-	    src/jsonval.h
-	    src/jsonval.cpp
-	    src/json_defs.h
-
+	        src/jsonreader.h
+	        src/jsonreader.cpp
+	        src/jsonwriter.h
+	        src/jsonwriter.cpp
+	        src/jsonval.h
+	        src/jsonval.cpp
+	        src/json_defs.h
+			api/ocpn-plugins.h
 )
+
 SET(SRC_LNMEA0183
 		src/nmea0183/LatLong.hpp
 		src/nmea0183/latlong.cpp
@@ -278,9 +279,9 @@ endif(UNIX AND NOT APPLE)
 ## ----- Change above to match project requirements ----- ##
 ## ----- do not change next section - needed to configure build process ----- ##
 ##
-include("cmake/PluginInstall.cmake")
-include("cmake/PluginLocalization.cmake")
-include("cmake/PluginPackage.cmake")
+include("PluginInstall")
+include("PluginLocalization")
+include("PluginPackage")
 
 ##
 ## ----- do not change section above - needed to configure build process ----- ##
