@@ -192,7 +192,7 @@ wxString polar_pi::GetShortDescription()
 
 wxString polar_pi::GetLongDescription()
 {
-         return _(PLUGIN_LONG_DESCRIPTION);
+     return _(PLUGIN_LONG_DESCRIPTION);
 }
 
 

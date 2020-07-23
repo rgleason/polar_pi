@@ -40,9 +40,9 @@ set(LONG_DESCRIPTION "Polar Plugin is used to read, create and edit, Boat Polar 
 
 set(VERSION_MAJOR "1")
 set(VERSION_MINOR "1")
-set(VERSION_PATCH "14")
+set(VERSION_PATCH "15")
 set(VERSION_TWEAK "0")
-set(VERSION_DATE "2017-07-20")
+set(VERSION_DATE "2017-07-23")
 set(OCPN_MIN_VERSION "ov50")
 set(OCPN_API_VERSION_MAJOR "1")
 set(OCPN_API_VERSION_MINOR "16")
