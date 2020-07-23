@@ -40,7 +40,7 @@ set(LONG_DESCRIPTION "Polar Plugin is used to read, create and edit, Boat Polar 
 
 set(VERSION_MAJOR "1")
 set(VERSION_MINOR "1")
-set(VERSION_PATCH "13")
+set(VERSION_PATCH "14")
 set(VERSION_TWEAK "0")
 set(VERSION_DATE "2017-07-20")
 set(OCPN_MIN_VERSION "ov50")
@@ -103,7 +103,7 @@ message(STATUS "${CMLOC}Build type: ${CMAKE_BUILD_TYPE}")
 ##
 
 project(${PACKAGE})
-
+set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake;")
 include("PluginSetup")
 
 ##
@@ -149,7 +149,8 @@ SET(SRC_POLAR
 	        src/jsonval.h
 	        src/jsonval.cpp
 	        src/json_defs.h
-			api/ocpn-plugins.h
+
+			api-16/ocpn_plugin.h
 )
 
 SET(SRC_LNMEA0183

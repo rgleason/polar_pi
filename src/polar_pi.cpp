@@ -186,16 +186,16 @@ wxString polar_pi::GetCommonName()
 
 wxString polar_pi::GetShortDescription()
 {
-      return _("Polar PlugIn for OpenCPN");
+   return _(PLUGIN_SHORT_DESCRIPTION);
 }
 
 
 wxString polar_pi::GetLongDescription()
 {
-      return _("Polar PlugIn for OpenCPN\n\
-");
-
+         return _(PLUGIN_LONG_DESCRIPTION);
 }
+
+
 
 
 void polar_pi::SetDefaults(void)
