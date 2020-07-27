@@ -4,7 +4,7 @@
 ## License:     wxWidgets License
 ##---------------------------------------------------------------------------
 # Frontend2 Author: Jon Gough  
-# Frontend2: v1.0.127
+# Frontend2: v1.0.131
 # ---------------------------------------------------------------------------
 ## ----- When changing this file do NOT change the order in which sections occur        ----- ##
 ## ----- Changes should only be made between the section blocks that identify where     ----- ##
@@ -41,8 +41,8 @@ set(LONG_DESCRIPTION "Polar Plugin is used to read, create and edit, Boat Polar 
 set(VERSION_MAJOR "1")
 set(VERSION_MINOR "1")
 set(VERSION_PATCH "15")
-set(VERSION_TWEAK "0")
-set(VERSION_DATE "2017-07-23")
+set(VERSION_TWEAK "1")
+set(VERSION_DATE "2017-07-26")
 set(OCPN_MIN_VERSION "ov50")
 set(OCPN_API_VERSION_MAJOR "1")
 set(OCPN_API_VERSION_MINOR "16")
@@ -51,7 +51,9 @@ set(TP_COMMENT "  * Release for O5 using CI")
 set(PARENT "opencpn")
 
 #Used to set up a local webserver with git loaded, for testing purposes.
-set(GIT_REPOSITORY_SERVER "github.com")
+#set(GIT_REPOSITORY_SERVER "github.com")
+#If this is not set, flatpak builds will fail
+#Moved into cmake/PluginConfigure.cmake
 
 #No longer needed, queried.
 #set(GIT_USER "rgleason")
@@ -66,9 +68,10 @@ set(ALPHA "alpha")  #Standard Repos
 #set(CLOUDSMITH_USER "rick-gleason")
 set(CLOUDSMITH_USER "opencpn")
 
+set (CLOUDSMITH_BASE_REPOSITORY "polar")  #without the pi 
 # Set if yourCloudsmith Base Repository name does not match your Git Repository name.
 # set(CLOUDSMITH_BASE_REPOSITORY "opencpn-plugins") #Rick's customization
-set (CLOUDSMITH_BASE_REPOSITORY "polar")  #without the pi 
+
 
 set(XML_INFO_URL "https://opencpn.org/OpenCPN/plugins/polar.html")
 set(XML_SUMMARY ${SHORT_DESCRIPTION})
