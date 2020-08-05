@@ -40,9 +40,9 @@ set(LONG_DESCRIPTION "Polar Plugin is used to read, create and edit, Boat Polar 
 
 set(VERSION_MAJOR "1")
 set(VERSION_MINOR "1")
-set(VERSION_PATCH "15")
-set(VERSION_TWEAK "1")
-set(VERSION_DATE "2017-07-26")
+set(VERSION_PATCH "16")
+set(VERSION_TWEAK "0")
+set(VERSION_DATE "2017-08-04")
 set(OCPN_MIN_VERSION "ov50")
 set(OCPN_API_VERSION_MAJOR "1")
 set(OCPN_API_VERSION_MINOR "16")
@@ -83,6 +83,8 @@ set(XML_DESCRIPTION ${LONG_DESCRIPTION})
 ##
 
 #option(PLUGIN_USE_SVG "Use SVG graphics" ON)   #Commented out to fix icon showing
+
+option(PLUGIN_USE_SVG "Use SVG graphics" ON)
 
 set(CMAKE_CXX_STANDARD 11)
 
