@@ -35,7 +35,7 @@ set(COMMON_NAME "Polar")  # Search "getcommonname"in <plugin_pi>.cpp
 set(TITLE_NAME "Polar")
 set(PACKAGE_CONTACT "Peter Tulp")
 set(PACKAGE "Polar")
-set(SHORT_DESCRIPTION "Polar Plugin makes polar diagrams and Polar files for Weather Routiing Predictions")
+set(SHORT_DESCRIPTION "Polar Plugin makes polar diagrams for Weather Routing Predictions")
 set(LONG_DESCRIPTION "Polar Plugin reads VDR data files directly, reads from Opencpn input Nmea channel (Record Start/Stop at bottom) and direct from LogBoookKonni records, to creates a polar diagram which can then be edited manually, saved or loaded as a Boat Polar file. The LogbookKonni selection has several options.")
 
 set(VERSION_MAJOR "1")
