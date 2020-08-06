@@ -4,7 +4,7 @@
 ## License:     wxWidgets License
 ##---------------------------------------------------------------------------
 # Frontend2 Author: Jon Gough  
-# Frontend2: v1.0.131
+# Frontend2: v1.0.132
 # ---------------------------------------------------------------------------
 ## ----- When changing this file do NOT change the order in which sections occur        ----- ##
 ## ----- Changes should only be made between the section blocks that identify where     ----- ##
@@ -35,14 +35,14 @@ set(COMMON_NAME "Polar")  # Search "getcommonname"in <plugin_pi>.cpp
 set(TITLE_NAME "Polar")
 set(PACKAGE_CONTACT "Peter Tulp")
 set(PACKAGE "Polar")
-set(SHORT_DESCRIPTION "Polar Plugin handles Polar files for Weather Route Predictions")
-set(LONG_DESCRIPTION "Polar Plugin is used to read, create and edit, Boat Polar Files")
+set(SHORT_DESCRIPTION "Polar Plugin makes polar diagrams and Polar files for Weather Routiing Predictions")
+set(LONG_DESCRIPTION "Polar Plugin reads VDR data files directly, reads from Opencpn input Nmea channel (Record Start/Stop at bottom) and direct from LogBoookKonni records, to creates a polar diagram which can then be edited manually, saved or loaded as a Boat Polar file. The LogbookKonni selection has several options.")
 
 set(VERSION_MAJOR "1")
 set(VERSION_MINOR "1")
 set(VERSION_PATCH "16")
 set(VERSION_TWEAK "0")
-set(VERSION_DATE "2017-08-04")
+set(VERSION_DATE "2017-08-06")
 set(OCPN_MIN_VERSION "ov50")
 set(OCPN_API_VERSION_MAJOR "1")
 set(OCPN_API_VERSION_MINOR "16")
@@ -52,7 +52,7 @@ set(PARENT "opencpn")
 
 #Used to set up a local webserver with git loaded, for testing purposes.
 #set(GIT_REPOSITORY_SERVER "github.com")
-#If this is not set, flatpak builds will fail
+#If this is not set, flatpak builds and local builds will fail.
 #Moved into cmake/PluginConfigure.cmake
 
 #No longer needed, queried.
@@ -109,7 +109,9 @@ message(STATUS "${CMLOC}Build type: ${CMAKE_BUILD_TYPE}")
 
 project(${PACKAGE})
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake;")
+##======================================
 include("PluginSetup")
+##======================================
 
 ##
 ## ----- The above is used to setup standard variables that are required by the CMAKE process - do not remove ----- ##
@@ -124,9 +126,9 @@ option(Plugin_CXX11 "Use c++11" OFF)
 ## ----- Modify section above if there are special requirements for the plugin ----- ##
 ## ----- do not change next section - needed to configure build process ----- ##
 ##
-
+##======================================
 include("PluginConfigure")
-
+##======================================
 ##
 ## ----- do not change section above - needed to configure build process ----- ##
 # ----- Change below to match project requirements for source, headers, etc. ----- ##
@@ -285,10 +287,11 @@ endif(UNIX AND NOT APPLE)
 ## ----- Change above to match project requirements ----- ##
 ## ----- do not change next section - needed to configure build process ----- ##
 ##
+##======================================
 include("PluginInstall")
 include("PluginLocalization")
 include("PluginPackage")
-
+##======================================
 ##
 ## ----- do not change section above - needed to configure build process ----- ##
 ##
