@@ -110,7 +110,7 @@ int polar_pi::Init(void)
       //    And load the configuration items
       LoadConfig();
 
-      // Get a pointer to the opencpn display canvas, to use as a parent for the Polar dialog
+      //    Get a pointer to the opencpn display canvas, to use as a parent for the Polar dialog
       m_parent_window = GetOCPNCanvasWindow();
 
       //    This PlugIn needs a toolbar icon, so request its insertion if enabled locally
