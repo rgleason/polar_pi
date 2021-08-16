@@ -115,9 +115,20 @@ int polar_pi::Init(void)
 
       //    This PlugIn needs a toolbar icon, so request its insertion if enabled locally
       if(m_bPolarShowIcon)
-            m_leftclick_tool_id  = InsertPlugInTool(_T(""), _img_Polar, _img_Polar, wxITEM_CHECK,
-                  _("Polar"), _T(""), NULL,
-                   POLAR_TOOL_POSITION, 0, this);
+//            m_leftclick_tool_id  = InsertPlugInTool(_T(""), _img_Polar, _img_Polar, wxITEM_CHECK,
+//                  _("Polar"), _T(""), NULL,
+//                   POLAR_TOOL_POSITION, 0, this);
+#ifdef PLUGIN_USE_SVG
+      m_leftclick_tool_id = InsertPlugInToolSVG(_T( "Polar" ),
+          _svg_polar_pi, _svg_polar_pi_rollover, _svg_polar_pi_toggled,
+          wxITEM_CHECK, _("Polar"), _T( "" ), NULL, POLAR_TOOL_POSITION, 0, this);
+#else
+      m_leftclick_tool_id  = InsertPlugInTool
+          (_T(""), _img_Polar, _img_Polar, wxITEM_CHECK,
+           _("Polar"), _T(""), NULL,
+           POLAR_TOOL_POSITION, 0, this);
+#endif
+
 
 //      wxMenuItem *pmi = new wxMenuItem(NULL, -1, _("PlugIn Item"));
 //      int miid = AddCanvasContextMenuItem(pmi, (PlugInCallBackFunction )&s_ContextMenuCallback );
