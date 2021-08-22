@@ -1,7 +1,7 @@
 site:
   title: PolarPlugin Manual
   url:  https://nowhere.net
-  start_page: polar:ROOT:polar.adoc
+  start_page: polar:ROOT:index.adoc
 
 content:
   sources:
