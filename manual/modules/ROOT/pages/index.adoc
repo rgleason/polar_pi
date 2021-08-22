@@ -16,8 +16,8 @@ This plugin can be used to Create, Load, View, Edit and Save polars.
 
 === 2. Install
 
-See link:../install_and_enable.html[Install and Enable] page for
-installing this plugin.
+See link:https://opencpn.org/wiki/dokuwiki/doku.php?id=opencpn:opencpn_user_manual:plugins:install_and_enable[
+Install and Enable] page for installing this plugin.
 
 === 3. Standard actions
 
@@ -64,11 +64,11 @@ current. Make several of these recordings for different sets of sails
 and reefing.
 . Using Polar_pi load one of the files.
 
-image::polar-load-data.jpg[]
+image::polar-load-data.jpeg[]
 
 Load Nmea0183 Recorded Data file
 
-image::polar-open-file.jpg[]
+image::polar-open-file.jpeg[]
 
 Open Nmea0183 Recorded Data file
 
@@ -95,4 +95,4 @@ image::polar_preference.png[]
 Polauto is a fully featured alternative created by by Patrick Tierclin
 another sailing Frenchman.
 
-* link:../../../supplementary_software/polauto.html[Polauto (Windows)]
+* link:https://opencpn.org/wiki/dokuwiki/doku.php?id=opencpn:supplementary_software:polauto[Polauto (Windows)]
