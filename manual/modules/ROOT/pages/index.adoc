@@ -16,8 +16,8 @@ This plugin can be used to Create, Load, View, Edit and Save polars.
 
 === 2. Install
 
-See link:https://opencpn.org/wiki/dokuwiki/doku.php?id=opencpn:opencpn_user_manual:plugins:install_and_enable[
-Install and Enable] page for installing this plugin.
+See xref:opencpn-plugins:misc:plugin-install.adoc[Install and Enable]
+page for installing this plugin.
 
 === 3. Standard actions
 
