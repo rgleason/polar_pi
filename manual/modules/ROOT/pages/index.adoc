@@ -95,4 +95,4 @@ image::polar_preference.png[]
 Polauto is a fully featured alternative created by by Patrick Tierclin
 another sailing Frenchman.
 
-* link:https://opencpn.org/wiki/dokuwiki/doku.php?id=opencpn:supplementary_software:polauto[Polauto (Windows)]
+* link:https://translate.google.com/translate?hl=en&sl=fr&u=http://www.plaisance-pratique.com/polauto-mesurer-la-polaire-reelle[Polauto (Windows)]
