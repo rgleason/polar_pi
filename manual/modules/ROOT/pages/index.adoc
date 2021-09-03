@@ -1,8 +1,8 @@
-== Polar
+= Polar
 
 Create your own Polar Files from Instruments
 
-=== Links
+== Links
 
 * Source: https://github.com/ptulp/polar_pi +
 * Download:https://opencpn.org/OpenCPN/plugins/polar.html +
@@ -10,16 +10,16 @@ Create your own Polar Files from Instruments
 http://www.cruisersforum.com/forums/f134/plugin-polar-105481.html[CF
 Polar_pi Thread] +
 
-=== 1. What and Why
+== 1. What and Why
 
 This plugin can be used to Create, Load, View, Edit and Save polars.
 
-=== 2. Install
+== 2. Install
 
 See xref:opencpn-plugins:misc:plugin-install.adoc[Install and Enable]
 page for installing this plugin.
 
-=== 3. Standard actions
+== 3. Standard actions
 
 image::polar-pi-eliminate-zeros.png[]
 
@@ -52,7 +52,7 @@ use the same sampling as above.
 Polar can read badly formatted polar files with lines of all zeros and
 can save the file out with the zeros removed.
 
-=== 4. Create your own Polar File
+== 4. Create your own Polar File
 
 . Confirm that your Wind and BSP/STW instruments are properly calibrated
 and that the nmea0183 data stream is working properly with full
@@ -86,11 +86,11 @@ that in Weather__routing you can load multiple polar files such as:
 This plugin does an excellent job of building and preparing polars for
 use in weather_routing.
 
-=== 5. Options
+== 5. Options
 
 image::polar_preference.png[]
 
-=== 6. Windows Alternative
+== 6. Windows Alternative
 
 Polauto is a fully featured alternative created by by Patrick Tierclin
 another sailing Frenchman.
