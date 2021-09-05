@@ -15,6 +15,7 @@ extern void initialize_images(void);
 extern wxBitmap *_img_Polar;
 
 #ifdef PLUGIN_USE_SVG
+extern wxString _svg_polar;
 extern wxString _svg_polar_pi;
 extern wxString _svg_polar_pi_rollover;
 extern wxString _svg_polar_pi_toggled;

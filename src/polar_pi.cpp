@@ -129,7 +129,6 @@ int polar_pi::Init(void)
            POLAR_TOOL_POSITION, 0, this);
 #endif
 
-
 //      wxMenuItem *pmi = new wxMenuItem(NULL, -1, _("PlugIn Item"));
 //      int miid = AddCanvasContextMenuItem(pmi, (PlugInCallBackFunction )&s_ContextMenuCallback );
 //      SetCanvasContextMenuItemViz(miid, true);
