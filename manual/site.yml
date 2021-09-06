@@ -1,5 +1,5 @@
 site:
-  title: PolarPlugin Manual
+  title: Polar Plugin Manual
   url:  https://nowhere.net
   start_page: polar:ROOT:index.adoc
 
