@@ -82,6 +82,7 @@ polar_pi::~polar_pi(void)
       delete _img_Polar;
 }
 
+
 int polar_pi::Init(void)
 {
 //      printf("polar_pi Init()\n");
@@ -114,19 +115,16 @@ int polar_pi::Init(void)
       m_parent_window = GetOCPNCanvasWindow();
 
       //    This PlugIn needs a toolbar icon, so request its insertion if enabled locally
+
       if(m_bPolarShowIcon)
-//            m_leftclick_tool_id  = InsertPlugInTool(_T(""), _img_Polar, _img_Polar, wxITEM_CHECK,
-//                  _("Polar"), _T(""), NULL,
-//                   POLAR_TOOL_POSITION, 0, this);
+		
+// For SVG Icon Use  - Also see three other instances below  Line 216-22  and  Line 272-278  added svg ufdef PLUGIN_USE_SVG
 #ifdef PLUGIN_USE_SVG
-      m_leftclick_tool_id = InsertPlugInToolSVG(_T( "Polar" ),
-          _svg_polar_pi, _svg_polar_pi_rollover, _svg_polar_pi_toggled,
-          wxITEM_CHECK, _("Polar"), _T( "" ), NULL, POLAR_TOOL_POSITION, 0, this);
+       m_leftclick_tool_id = InsertPlugInToolSVG(_T( "Polar" ),
+            _svg_polar, _svg_polar_rollover, _svg_polar_toggled,
+             wxITEM_CHECK, _("Polar"), _T( "" ), NULL, POLAR_TOOL_POSITION, 0, this);
 #else
-      m_leftclick_tool_id  = InsertPlugInTool
-          (_T(""), _img_Polar, _img_Polar, wxITEM_CHECK,
-           _("Polar"), _T(""), NULL,
-           POLAR_TOOL_POSITION, 0, this);
+        m_leftclick_tool_id  = InsertPlugInTool (_T(""), _img_Polar, _img_Polar, wxITEM_CHECK, _("Polar"), _T(""), NULL, POLAR_TOOL_POSITION, 0, this);
 #endif
 
 //      wxMenuItem *pmi = new wxMenuItem(NULL, -1, _("PlugIn Item"));
@@ -214,10 +212,14 @@ void polar_pi::SetDefaults(void)
       if(!m_bPolarShowIcon)
       {
             m_bPolarShowIcon = true;
-
-            m_leftclick_tool_id  = InsertPlugInTool(_T(""), _img_Polar, _img_Polar, wxITEM_CHECK,
-                  _("Polar"), _T(""), NULL,
-                   POLAR_TOOL_POSITION, 0, this);
+    
+#ifdef PLUGIN_USE_SVG
+        m_leftclick_tool_id = InsertPlugInToolSVG(_T( "Polar" ), _svg_polar, _svg_polar_rollover, _svg_polar_toggled,
+            wxITEM_CHECK, _("Polar"), _T( "" ), NULL, POLAR_TOOL_POSITION, 0, this);
+#else
+        m_bPolarShowIcon = true;   
+        m_leftclick_tool_id  = InsertPlugInTool (_T(""), _img_Polar, _img_Polar, wxITEM_CHECK, _("Polar"), _T(""), NULL, POLAR_TOOL_POSITION, 0, this);
+#endif
       }
 }
 
@@ -266,9 +268,15 @@ void polar_pi::ShowPreferencesDialog( wxWindow* parent )
                   m_bPolarShowIcon= m_pPolarShowIcon->GetValue();
 
                   if(m_bPolarShowIcon)
-                        m_leftclick_tool_id  = InsertPlugInTool(_T(""), _img_Polar, _img_Polar, wxITEM_CHECK,
-                              _("Polar"), _T(""), NULL, POLAR_TOOL_POSITION,
-                              0, this);
+
+#ifdef PLUGIN_USE_SVG
+      m_leftclick_tool_id = InsertPlugInToolSVG(_T( "Polar" ),
+          _svg_polar, _svg_polar_rollover, _svg_polar_toggled,
+          wxITEM_CHECK, _("Polar"), _T( "" ), NULL, POLAR_TOOL_POSITION, 0, this);
+#else
+      m_leftclick_tool_id  = InsertPlugInTool (_T(""), _img_Polar, _img_Polar, wxITEM_CHECK, _("Polar"), _T(""), NULL, POLAR_TOOL_POSITION, 0, this);
+#endif
+
                   else
                         RemovePlugInTool(m_leftclick_tool_id);
             }

@@ -11,9 +11,8 @@ wxBitmap *_img_Polar;
 #ifdef PLUGIN_USE_SVG
 #include "ocpn_plugin.h"
 wxString _svg_polar;
-wxString _svg_polar_pi;
-wxString _svg_polar_pi_rollover;
-wxString _svg_polar_pi_toggled;
+wxString _svg_polar_rollover;
+wxString _svg_polar_toggled;
 #endif
 
 void initialize_images(void)
@@ -27,13 +26,13 @@ void initialize_images(void)
     wxFileName fn;
     fn.SetPath(GetPluginDataDir("polar_pi"));
     fn.AppendDir(_T("data"));
-    fn.SetFullName(_T("polar_pi.svg"));
-    _svg_polar_pi = fn.GetFullPath();
-    wxLogMessage(_T("Loading toolbar icon: ") + _svg_polar_pi);
-    fn.SetFullName(_T("polar_pi_rollover.svg"));
-    _svg_polar_pi_rollover = fn.GetFullPath();
-    fn.SetFullName(_T("polar_pi_toggled.svg"));
-    _svg_polar_pi_toggled = fn.GetFullPath();
+    fn.SetFullName(_T("polar.svg"));
+    _svg_polar = fn.GetFullPath();
+    wxLogMessage(_T("Loading toolbar icon: ") + _svg_polar);
+    fn.SetFullName(_T("polar_rollover.svg"));
+    _svg_polar_rollover = fn.GetFullPath();
+    fn.SetFullName(_T("polar_toggled.svg"));
+    _svg_polar_toggled = fn.GetFullPath();
 #endif
 	return;
 }
