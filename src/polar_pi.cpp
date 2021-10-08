@@ -143,7 +143,7 @@ bool polar_pi::DeInit(void)
 }
 
 void polar_pi::SetPluginMessage(wxString &message_id, wxString &message_body)
-{		
+{
       if(message_id == _T("LOGBOOK_ENGINEBUTTON1"))
       {
 		if(m_pPolarDialog)
@@ -179,8 +179,8 @@ wxBitmap *polar_pi::GetPlugInBitmap()
 wxString polar_pi::GetCommonName()
 {
       //return _("Polar");
-	  
-	 return _T(PLUGIN_COMMON_NAME); 
+
+	 return _T(PLUGIN_COMMON_NAME);
 }
 
 
@@ -232,13 +232,13 @@ void polar_pi::ShowPreferencesDialog( wxWindow* parent )
     wxStaticBoxSizer* itemStaticBoxSizerPolar = new wxStaticBoxSizer(itemStaticBoxSizerPolarStatic, wxVERTICAL);
     itemBoxSizerPolarPanel->Add(itemStaticBoxSizerPolar, 0, wxGROW|wxALL, border_size);
 
-    m_pPolarShowIcon = new wxCheckBox( dialog, -1, _("Show Polar icon"), wxDefaultPosition, wxSize(-1, -1), 0 );
-    itemStaticBoxSizerPolar->Add(m_pPolarShowIcon, 1, wxALIGN_LEFT|wxALL, border_size);
+    //m_pPolarShowIcon = new wxCheckBox( dialog, -1, _("Show Polar icon"), wxDefaultPosition, wxSize(-1, -1), 0 );
+    //itemStaticBoxSizerPolar->Add(m_pPolarShowIcon, 1, wxALIGN_LEFT|wxALL, border_size);
 
     m_pPolarUseMS = new wxCheckBox( dialog, -1, _("Show metres/sec for Wind Speed"));
     itemStaticBoxSizerPolar->Add(m_pPolarUseMS, 1, wxALIGN_LEFT|wxALL, border_size);
 
-    m_pPolarShowIcon->SetValue(m_bPolarShowIcon);
+    //m_pPolarShowIcon->SetValue(m_bPolarShowIcon);
     m_pPolarUseMS->SetValue(m_bPolarUseMS);
 
 
@@ -251,17 +251,17 @@ void polar_pi::ShowPreferencesDialog( wxWindow* parent )
       {
 
             //    Show Icon changed value?
-            if(m_bPolarShowIcon != m_pPolarShowIcon->GetValue())
-            {
-                  m_bPolarShowIcon= m_pPolarShowIcon->GetValue();
-
-                  if(m_bPolarShowIcon)
-                        m_leftclick_tool_id  = InsertPlugInTool(_T(""), _img_Polar, _img_Polar, wxITEM_CHECK,
-                              _("Polar"), _T(""), NULL, POLAR_TOOL_POSITION,
-                              0, this);
-                  else
-                        RemovePlugInTool(m_leftclick_tool_id);
-            }
+//             if(m_bPolarShowIcon != m_pPolarShowIcon->GetValue())
+//             {
+//                   m_bPolarShowIcon= m_pPolarShowIcon->GetValue();
+//
+//                   if(m_bPolarShowIcon)
+//                         m_leftclick_tool_id  = InsertPlugInTool(_T(""), _img_Polar, _img_Polar, wxITEM_CHECK,
+//                               _("Polar"), _T(""), NULL, POLAR_TOOL_POSITION,
+//                               0, this);
+//                   else
+//                         RemovePlugInTool(m_leftclick_tool_id);
+//             }
 
 
             if(m_bPolarUseMS != m_pPolarUseMS->GetValue())
@@ -287,6 +287,7 @@ void polar_pi::ShowPreferencesDialog( wxWindow* parent )
 
             SaveConfig();
       }
+      delete dialog;
 }
 
 void polar_pi::OnToolbarToolCallback(int id)
@@ -352,7 +353,7 @@ void polar_pi::OnToolbarToolCallback(int id)
 		  else
 			  m_pPolarDialog->m_splitter1->Unsplit();
 
-            m_pPolarDialog->Hide();                        
+            m_pPolarDialog->Hide();
       }
 
       //    Toggle dialog?
@@ -400,7 +401,8 @@ bool polar_pi::LoadConfig(void)
       if(pConf)
       {
             pConf->SetPath ( _T( "/PlugIns/Polar" ) );
-            pConf->Read ( _T( "ShowPolarIcon" ),  &m_bPolarShowIcon, 1 );
+            //pConf->Read ( _T( "ShowPolarIcon" ),  &m_bPolarShowIcon, 1 );
+            m_bPolarShowIcon = 1;
             pConf->Read ( _T( "PolarUseMS" ),     &m_bPolarUseMS, 0 );
 
 
@@ -428,7 +430,7 @@ bool polar_pi::LoadConfig(void)
 					opt->rowGap = wxAtoi(tkz.GetNextToken());
 					opt->colGap = wxAtoi(tkz.GetNextToken());
 				}
-				
+
 				for(int i = 0; i < 14; i++)
 				{
 					opt->abrSails.Add(tkz.GetNextToken());
@@ -449,7 +451,7 @@ bool polar_pi::SaveConfig(void)
       if(pConf)
       {
             pConf->SetPath ( _T ( "/Plugins/Polar" ) );
-            pConf->Write ( _T ( "ShowPolarIcon" ), m_bPolarShowIcon );
+            //pConf->Write ( _T ( "ShowPolarIcon" ), m_bPolarShowIcon );
             pConf->Write ( _T ( "PolarUseMS" ),    m_bPolarUseMS );
 
             pConf->Write ( _T ( "PolarDialogSizeX" ),  m_Polar_dialog_sx );
