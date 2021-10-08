@@ -232,13 +232,13 @@ void polar_pi::ShowPreferencesDialog( wxWindow* parent )
     wxStaticBoxSizer* itemStaticBoxSizerPolar = new wxStaticBoxSizer(itemStaticBoxSizerPolarStatic, wxVERTICAL);
     itemBoxSizerPolarPanel->Add(itemStaticBoxSizerPolar, 0, wxGROW|wxALL, border_size);
 
-    m_pPolarShowIcon = new wxCheckBox( dialog, -1, _("Show Polar icon"), wxDefaultPosition, wxSize(-1, -1), 0 );
-    itemStaticBoxSizerPolar->Add(m_pPolarShowIcon, 1, wxALIGN_LEFT|wxALL, border_size);
+    //m_pPolarShowIcon = new wxCheckBox( dialog, -1, _("Show Polar icon"), wxDefaultPosition, wxSize(-1, -1), 0 );
+    //itemStaticBoxSizerPolar->Add(m_pPolarShowIcon, 1, wxALIGN_LEFT|wxALL, border_size);
 
     m_pPolarUseMS = new wxCheckBox( dialog, -1, _("Show metres/sec for Wind Speed"));
     itemStaticBoxSizerPolar->Add(m_pPolarUseMS, 1, wxALIGN_LEFT|wxALL, border_size);
 
-    m_pPolarShowIcon->SetValue(m_bPolarShowIcon);
+    //m_pPolarShowIcon->SetValue(m_bPolarShowIcon);
     m_pPolarUseMS->SetValue(m_bPolarUseMS);
 
 
@@ -251,17 +251,17 @@ void polar_pi::ShowPreferencesDialog( wxWindow* parent )
       {
 
             //    Show Icon changed value?
-            if(m_bPolarShowIcon != m_pPolarShowIcon->GetValue())
-            {
-                  m_bPolarShowIcon= m_pPolarShowIcon->GetValue();
-
-                  if(m_bPolarShowIcon)
-                        m_leftclick_tool_id  = InsertPlugInTool(_T(""), _img_Polar, _img_Polar, wxITEM_CHECK,
-                              _("Polar"), _T(""), NULL, POLAR_TOOL_POSITION,
-                              0, this);
-                  else
-                        RemovePlugInTool(m_leftclick_tool_id);
-            }
+//             if(m_bPolarShowIcon != m_pPolarShowIcon->GetValue())
+//             {
+//                   m_bPolarShowIcon= m_pPolarShowIcon->GetValue();
+//
+//                   if(m_bPolarShowIcon)
+//                         m_leftclick_tool_id  = InsertPlugInTool(_T(""), _img_Polar, _img_Polar, wxITEM_CHECK,
+//                               _("Polar"), _T(""), NULL, POLAR_TOOL_POSITION,
+//                               0, this);
+//                   else
+//                         RemovePlugInTool(m_leftclick_tool_id);
+//             }
 
 
             if(m_bPolarUseMS != m_pPolarUseMS->GetValue())
@@ -401,7 +401,8 @@ bool polar_pi::LoadConfig(void)
       if(pConf)
       {
             pConf->SetPath ( _T( "/PlugIns/Polar" ) );
-            pConf->Read ( _T( "ShowPolarIcon" ),  &m_bPolarShowIcon, 1 );
+            //pConf->Read ( _T( "ShowPolarIcon" ),  &m_bPolarShowIcon, 1 );
+            m_bPolarShowIcon = 1;
             pConf->Read ( _T( "PolarUseMS" ),     &m_bPolarUseMS, 0 );
 
 
@@ -450,7 +451,7 @@ bool polar_pi::SaveConfig(void)
       if(pConf)
       {
             pConf->SetPath ( _T ( "/Plugins/Polar" ) );
-            pConf->Write ( _T ( "ShowPolarIcon" ), m_bPolarShowIcon );
+            //pConf->Write ( _T ( "ShowPolarIcon" ), m_bPolarShowIcon );
             pConf->Write ( _T ( "PolarUseMS" ),    m_bPolarUseMS );
 
             pConf->Write ( _T ( "PolarDialogSizeX" ),  m_Polar_dialog_sx );
