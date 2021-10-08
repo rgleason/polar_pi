@@ -244,8 +244,8 @@ void polar_pi::ShowPreferencesDialog( wxWindow* parent )
     wxStaticBoxSizer* itemStaticBoxSizerPolar = new wxStaticBoxSizer(itemStaticBoxSizerPolarStatic, wxVERTICAL);
     itemBoxSizerPolarPanel->Add(itemStaticBoxSizerPolar, 0, wxGROW|wxALL, border_size);
 
-    m_pPolarShowIcon = new wxCheckBox( dialog, -1, _("Show Polar icon"), wxDefaultPosition, wxSize(-1, -1), 0 );
-    itemStaticBoxSizerPolar->Add(m_pPolarShowIcon, 1, wxALIGN_LEFT|wxALL, border_size);
+    //m_pPolarShowIcon = new wxCheckBox( dialog, -1, _("Show Polar icon"), wxDefaultPosition, wxSize(-1, -1), 0 );
+    //itemStaticBoxSizerPolar->Add(m_pPolarShowIcon, 1, wxALIGN_LEFT|wxALL, border_size);
 
     m_pPolarUseMS = new wxCheckBox( dialog, -1, _("Show metres/sec for Wind Speed"));
     itemStaticBoxSizerPolar->Add(m_pPolarUseMS, 1, wxALIGN_LEFT|wxALL, border_size);
@@ -305,6 +305,7 @@ void polar_pi::ShowPreferencesDialog( wxWindow* parent )
 
             SaveConfig();
       }
+	  delete dialog;
 }
 
 void polar_pi::OnToolbarToolCallback(int id)
