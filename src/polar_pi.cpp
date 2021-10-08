@@ -143,7 +143,7 @@ bool polar_pi::DeInit(void)
 }
 
 void polar_pi::SetPluginMessage(wxString &message_id, wxString &message_body)
-{		
+{
       if(message_id == _T("LOGBOOK_ENGINEBUTTON1"))
       {
 		if(m_pPolarDialog)
@@ -179,8 +179,8 @@ wxBitmap *polar_pi::GetPlugInBitmap()
 wxString polar_pi::GetCommonName()
 {
       //return _("Polar");
-	  
-	 return _T(PLUGIN_COMMON_NAME); 
+
+	 return _T(PLUGIN_COMMON_NAME);
 }
 
 
@@ -287,6 +287,7 @@ void polar_pi::ShowPreferencesDialog( wxWindow* parent )
 
             SaveConfig();
       }
+      delete dialog;
 }
 
 void polar_pi::OnToolbarToolCallback(int id)
@@ -352,7 +353,7 @@ void polar_pi::OnToolbarToolCallback(int id)
 		  else
 			  m_pPolarDialog->m_splitter1->Unsplit();
 
-            m_pPolarDialog->Hide();                        
+            m_pPolarDialog->Hide();
       }
 
       //    Toggle dialog?
@@ -428,7 +429,7 @@ bool polar_pi::LoadConfig(void)
 					opt->rowGap = wxAtoi(tkz.GetNextToken());
 					opt->colGap = wxAtoi(tkz.GetNextToken());
 				}
-				
+
 				for(int i = 0; i < 14; i++)
 				{
 					opt->abrSails.Add(tkz.GetNextToken());
