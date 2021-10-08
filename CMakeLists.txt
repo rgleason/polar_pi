@@ -40,8 +40,8 @@ set(LONG_DESCRIPTION "Polar Plugin reads VDR data files directly, reads from Ope
 set(VERSION_MAJOR "1")
 set(VERSION_MINOR "1")
 set(VERSION_PATCH "17")
-set(VERSION_TWEAK "28")
-set(VERSION_DATE "27/08/2021")# DD/MM/YYYY format
+set(VERSION_TWEAK "29")
+set(VERSION_DATE "07/10/2021")# DD/MM/YYYY format
 set(OCPN_MIN_VERSION "ov50")
 set(OCPN_API_VERSION_MAJOR "1")
 set(OCPN_API_VERSION_MINOR "16")
@@ -122,7 +122,7 @@ include("PluginConfigure")
 
 add_definitions(-DUSE_S57)
 
-SET(SRC_POLAR
+SET(SRCS
             src/polar_pi.h
             src/polar_pi.cpp
             src/PolarGui.h
@@ -142,6 +142,20 @@ SET(SRC_POLAR
 	        src/jsonval.cpp
 	        src/json_defs.h
 )
+
+SET(HDRS
+            src/polar_pi.h
+            src/PolarGui.h
+            src/PolarDialog.h
+            src/Options.h			
+            src/Polar.h
+            src/icons.h 
+	        src/jsonreader.h
+	        src/jsonwriter.h
+	        src/jsonval.h
+	        src/json_defs.h
+)
+
 
 SET(SRC_LNMEA0183
 		src/nmea0183/LatLong.hpp
@@ -222,7 +236,7 @@ include_directories(BEFORE ${PROJECT_SOURCE_DIR}/src/nmea0183)
 #target_sources(${PACKAGE_NAME} PUBLIC ${SRC_POLAR} ${SRC_LNMEA0183} ${EXTSRC} ${LIBSSRC})
 
 ##=================================================
-target_sources(${PACKAGE_NAME} PUBLIC ${SRC_POLAR} ${SRC_LNMEA0183} ${EXTSRC})
+target_sources(${PACKAGE_NAME} PUBLIC ${SRCS}  ${HDRS} ${SRC_LNMEA0183} ${EXTSRC})
 ##=================================================
 
 if(NOT OCPN_FLATPAK_CONFIG)
