@@ -115,9 +115,15 @@ int polar_pi::Init(void)
 
       //    This PlugIn needs a toolbar icon, so request its insertion if enabled locally
       if(m_bPolarShowIcon)
-            m_leftclick_tool_id  = InsertPlugInTool(_T(""), _img_Polar, _img_Polar, wxITEM_CHECK,
-                  _("Polar"), _T(""), NULL,
-                   POLAR_TOOL_POSITION, 0, this);
+		
+// For SVG Icon Use  - Also see three other instances below  Line 216-22  and  Line 272-278  added svg ufdef PLUGIN_USE_SVG
+//#ifdef PLUGIN_USE_SVG
+//       m_leftclick_tool_id = InsertPlugInToolSVG(_T( "Polar" ),
+//            _svg_polar, _svg_polar_rollover, _svg_polar_toggled,
+//             wxITEM_CHECK, _("Polar"), _T( "" ), NULL, POLAR_TOOL_POSITION, 0, // this);
+//#else
+        m_leftclick_tool_id  = InsertPlugInTool (_T(""), _img_Polar, _img_Polar, wxITEM_CHECK, _("Polar"), _T(""), NULL, POLAR_TOOL_POSITION, 0, this);
+//#endif
 
 //      wxMenuItem *pmi = new wxMenuItem(NULL, -1, _("PlugIn Item"));
 //      int miid = AddCanvasContextMenuItem(pmi, (PlugInCallBackFunction )&s_ContextMenuCallback );
@@ -203,11 +209,15 @@ void polar_pi::SetDefaults(void)
       // If the config somehow says NOT to show the icon, override it so the user gets good feedback
       if(!m_bPolarShowIcon)
       {
-            m_bPolarShowIcon = true;
-
-            m_leftclick_tool_id  = InsertPlugInTool(_T(""), _img_Polar, _img_Polar, wxITEM_CHECK,
-                  _("Polar"), _T(""), NULL,
-                   POLAR_TOOL_POSITION, 0, this);
+           
+    
+//#ifdef PLUGIN_USE_SVG
+//        m_leftclick_tool_id = InsertPlugInToolSVG(_T( "Polar" ), _svg_polar, _svg_polar_rollover, _svg_polar_toggled,
+//            wxITEM_CHECK, _("Polar"), _T( "" ), NULL, POLAR_TOOL_POSITION, 0, this);
+//#else
+        m_bPolarShowIcon = true;
+        m_leftclick_tool_id  = InsertPlugInTool (_T(""), _img_Polar, _img_Polar, wxITEM_CHECK, _("Polar"), _T(""), NULL, POLAR_TOOL_POSITION, 0, this);
+//#endif
       }
 }
 
@@ -251,17 +261,17 @@ void polar_pi::ShowPreferencesDialog( wxWindow* parent )
       {
 
             //    Show Icon changed value?
-//             if(m_bPolarShowIcon != m_pPolarShowIcon->GetValue())
-//             {
-//                   m_bPolarShowIcon= m_pPolarShowIcon->GetValue();
+//            if(m_bPolarShowIcon != m_pPolarShowIcon->GetValue())
+//            {
+//                  m_bPolarShowIcon= m_pPolarShowIcon->GetValue();
+//  
+//                  if(m_bPolarShowIcon)
+//      m_leftclick_tool_id  = InsertPlugInTool (_T(""), _img_Polar, _img_Polar, wxITEM_CHECK, 
+// _("Polar"), _T(""), NULL, POLAR_TOOL_POSITION, 0, this);
 //
-//                   if(m_bPolarShowIcon)
-//                         m_leftclick_tool_id  = InsertPlugInTool(_T(""), _img_Polar, _img_Polar, wxITEM_CHECK,
-//                               _("Polar"), _T(""), NULL, POLAR_TOOL_POSITION,
-//                               0, this);
-//                   else
-//                         RemovePlugInTool(m_leftclick_tool_id);
-//             }
+//                  else
+//                        RemovePlugInTool(m_leftclick_tool_id);
+//            }
 
 
             if(m_bPolarUseMS != m_pPolarUseMS->GetValue())
@@ -287,7 +297,7 @@ void polar_pi::ShowPreferencesDialog( wxWindow* parent )
 
             SaveConfig();
       }
-      delete dialog;
+	  delete dialog;
 }
 
 void polar_pi::OnToolbarToolCallback(int id)
@@ -402,7 +412,7 @@ bool polar_pi::LoadConfig(void)
       {
             pConf->SetPath ( _T( "/PlugIns/Polar" ) );
             //pConf->Read ( _T( "ShowPolarIcon" ),  &m_bPolarShowIcon, 1 );
-            m_bPolarShowIcon = 1;
+
             pConf->Read ( _T( "PolarUseMS" ),     &m_bPolarUseMS, 0 );
 
 
