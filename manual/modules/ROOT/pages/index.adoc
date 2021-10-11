@@ -27,7 +27,7 @@ The Polar plugin has 4 modes of operation:
 
 . Data from logbooks: This mode will read from all logbooks found in the
 logbook/data directory. If enough data points are found, a polar will be created.
-* Data from NMEA: This mode will read data from the NMEA stream and
+. Data from NMEA: This mode will read data from the NMEA stream and
 create a Polar from this data.
 . Data from VDR File: This mode will read a given VDR file and will
 use the NMEA messages in the file to create a Polar.
@@ -67,7 +67,6 @@ image::polar-load-data.jpeg[]
 
 Load Nmea0183 Recorded Data file
 
-
 image::polar-open-file.jpeg[]
 
 Open Nmea0183 Recorded Data file
@@ -77,6 +76,7 @@ Open Nmea0183 Recorded Data file
 . Now you can use it in Weather_routing as one of your Polar files. 
 
 Note that in Weather__routing you can load multiple polar files such as:
+
 .. Very light wind under power
 .. Light to medium wind under mainsail and genoa
 .. Heavy wind under mainsail and jib, etc.

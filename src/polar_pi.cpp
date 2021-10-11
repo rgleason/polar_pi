@@ -412,6 +412,7 @@ bool polar_pi::LoadConfig(void)
       {
             pConf->SetPath ( _T( "/PlugIns/Polar" ) );
             //pConf->Read ( _T( "ShowPolarIcon" ),  &m_bPolarShowIcon, 1 );
+
             pConf->Read ( _T( "PolarUseMS" ),     &m_bPolarUseMS, 0 );
 
 
