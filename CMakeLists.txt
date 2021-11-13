@@ -3,7 +3,7 @@
 ## Copyright:   
 ## License:     wxWidgets License
 ##---------------------------------------------------------------------------
-## Frontend Author: Jon Gough  Frontend2 Version: 1.0.176.1  Date:04/10/2021  DD/MM/YYYY       
+## Frontend Author: Jon Gough  Frontend2 Version: 1.0.180  Date:01/11/2021  DD/MM/YYYY       
 ##  buildCI:yes useODAPI:no validateJSON:no  
 ## ---------------------------------------------------------------------------
 ## ----- When changing this file do NOT change the order in which sections occur        ----- ##
@@ -17,12 +17,14 @@
 set(CMLOC "CMakeLists: ")
 
 # define minimum cmake version
-cmake_minimum_required(VERSION 3.1.1)
+cmake_minimum_required(VERSION 3.5.1)
 if(COMMAND cmake_policy)
     if(POLICY CMP0043)
         cmake_policy(SET CMP0043 NEW)
     endif(POLICY CMP0043)
     cmake_policy(SET CMP0048 NEW)
+# Need cmake 3.13 to implement this, but raspbian builds are at 3.7.2 and bionic at 3.10 and xenial builds at 3.5.1
+#    cmake_policy(SET CMP0076 NEW)
     if(POLICY CMP0077)
         cmake_policy(SET CMP0077 NEW)
     endif(POLICY CMP0077)
@@ -40,7 +42,7 @@ set(LONG_DESCRIPTION "Polar Plugin reads VDR data files directly, reads from Ope
 set(VERSION_MAJOR "1")
 set(VERSION_MINOR "1")
 set(VERSION_PATCH "20")
-set(VERSION_TWEAK "0")
+set(VERSION_TWEAK "5")
 set(VERSION_DATE "12/10/2021")# DD/MM/YYYY format
 set(OCPN_MIN_VERSION "ov50")
 set(OCPN_API_VERSION_MAJOR "1")
@@ -154,6 +156,18 @@ SET(HDRS
 	        src/jsonval.h
 	        src/json_defs.h
 )
+set(LIBSSRC libs/wxJSON/src/jsonreader.cpp libs/wxJSON/src/jsonval.cpp libs/wxJSON/src/jsonwriter.cpp)
+
+set(LIBHDRS
+    libs/GL/gl.h
+    libs/GL/gl_private.h
+    libs/GL/glext.h
+    libs/GL/glu.h
+    libs/wx/include/json_defs.h
+    libs/wx/include/jsonreader.h
+    libs/wx/include/jsonval.h
+    libs/wx/include/jsonwriter.h)
+
 
 SET(SRC_LNMEA0183
 		src/nmea0183/LatLong.hpp
@@ -218,20 +232,46 @@ add_definitions(-DPLUGIN_USE_SVG)
 set(EXTINCLUDE_DIR ${EXTINCLUDE_DIR} extinclude libs/ocpn-api/)
 # =================================================
 
+#
+# ----- If using JSON validation in plugin section below is needed ----- ##
+#
+
+# Not doing JSON Validation
+
+#
+# ----- If using JSON validation in plugin section above is needed ----- ##
+#
+
 # Modify/configure 'Include' Directories below for the Plugin
 
+#include_directories(BEFORE ${PROJECT_SOURCE_DIR}/include)
 include_directories(BEFORE ${PROJECT_SOURCE_DIR}/ocpninclude)
 include_directories(BEFORE ${PROJECT_SOURCE_DIR}/ocpnsrc/glu/include)
 include_directories(BEFORE ${PROJECT_SOURCE_DIR}/${EXTINCLUDE_DIR})
 include_directories(BEFORE ${PROJECT_SOURCE_DIR}/libs/)
+include_directories(BEFORE ${PROJECT_SOURCE_DIR}/libs/GL)
 include_directories(BEFORE ${PROJECT_SOURCE_DIR}/libs/ocpn-api)
-#include_directories(BEFORE ${PROJECT_SOURCE_DIR}/libs/wx/include)
+include_directories(BEFORE ${PROJECT_SOURCE_DIR}/libs/wx/include)
 #include_directories(BEFORE ${PROJECT_SOURCE_DIR}/libs/wxJSON/include)
 include_directories(BEFORE ${PROJECT_SOURCE_DIR}/src/nmea0183)
+
+
+
+## ----- Change below to match project requirements for android build ----- ##
+
+
+if(QT_ANDROID)
+    include_directories( ${PROJECT_SOURCE_DIR}/extinclude/GLES2)
+endif(QT_ANDROID)
+
+## ----- Change above to match project requirements for android build ----- ##
+
 
 ## Adjust statement below to collect all the set( headers and SRCS
 ##  ADD_LIBRARY(${PACKAGE_NAME} SHARED ${SRC_POLAR} ${SRC_LNMEA0183})
 #target_sources(${PACKAGE_NAME} PUBLIC ${SRC_POLAR} ${SRC_LNMEA0183} ${EXTSRC} ${LIBSSRC})
+## target_sources(${PACKAGE_NAME} PUBLIC ${SRCS} ${HDRS} ${OCPNSRC} ${EXTSRC} ${LIBSSRC})
+
 
 ##=================================================
 target_sources(${PACKAGE_NAME} PUBLIC ${SRCS}  ${HDRS} ${SRC_LNMEA0183} ${EXTSRC})
@@ -240,6 +280,7 @@ target_sources(${PACKAGE_NAME} PUBLIC ${SRCS}  ${HDRS} ${SRC_LNMEA0183} ${EXTSRC
 if(NOT OCPN_FLATPAK_CONFIG)
     # Build environment not available when flatpak is being configured so following statements will not work
     message(STATUS "${CMLOC}Adding target link libraries to ${PACKAGE_NAME}")
+
 #    add_subdirectory(libs/tinyxml)
 #    target_link_libraries(${PACKAGE_NAME} ocpn::tinyxml)
 endif(NOT OCPN_FLATPAK_CONFIG)
