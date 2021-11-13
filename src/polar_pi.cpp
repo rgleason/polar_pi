@@ -60,7 +60,7 @@ extern "C" DECL_EXP void destroy_pi(opencpn_plugin* p)
 //
 //---------------------------------------------------------------------------------------------------------
 
-#include "icons.h"
+
 
 
 
@@ -69,6 +69,9 @@ extern "C" DECL_EXP void destroy_pi(opencpn_plugin* p)
 //          PlugIn initialization and de-init
 //
 //---------------------------------------------------------------------------------------------------------
+
+#include "icons.h"
+
 
 polar_pi::polar_pi(void *ppimgr)
       :opencpn_plugin_116(ppimgr)
@@ -107,28 +110,34 @@ int polar_pi::Init(void)
       //    Get a pointer to the opencpn configuration object
       m_pconfig = GetOCPNConfigObject();
 
-
       // Get a pointer to the opencpn display canvas, to use as a parent for the Polar dialog
+	  
       m_parent_window = GetOCPNCanvasWindow();
 
       //    This PlugIn needs a toolbar icon, so request its insertion if enabled locally
- //     if(m_bPolarShowIcon)
+     if(m_bPolarShowIcon)
 		
 // For SVG Icon Use  - Also see three other instances below  Line 216-22  and  Line 272-278  added svg ufdef PLUGIN_USE_SVG
 
 #ifdef PLUGIN_USE_SVG
-       m_leftclick_tool_id = InsertPlugInToolSVG(_T( "Polar" ),
+       m_leftclick_tool_id = InsertPlugInToolSVG( _T( "Polar" ),
             _svg_polar, _svg_polar_toggled, _svg_polar_toggled,
              wxITEM_CHECK, _("Polar"), _T( "" ), NULL, POLAR_TOOL_POSITION, 0, this);
 #else
-        m_leftclick_tool_id  = InsertPlugInTool (_T(""), _img_Polar, _img_Polar, wxITEM_CHECK, _("Polar"), _T(""), NULL, POLAR_TOOL_POSITION, 0, this);
+        m_leftclick_tool_id  = InsertPlugInTool( _T(""), 
+	       _img_Polar, _img_Polar, 
+		    wxITEM_CHECK, _("Polar"), _T( "" ), NULL, POLAR_TOOL_POSITION, 0, this);
 #endif
 
 //      wxMenuItem *pmi = new wxMenuItem(NULL, -1, _("PlugIn Item"));
+//      int miid = AddCanvasContextMenuItem(pmi, (PlugInCallBackFunction )&s_ContextMenuCallback);																				
 //      SetCanvasContextMenuItemViz(miid, true);
 
-      //    And load the configuration items 
+      //    And load the configuration items
       LoadConfig();
+					
+
+
 
       return (WANTS_TOOLBAR_CALLBACK |
            INSTALLS_TOOLBAR_TOOL     |
@@ -206,15 +215,17 @@ wxString polar_pi::GetLongDescription()
 void polar_pi::SetDefaults(void)
 {
       // If the config somehow says NOT to show the icon, override it so the user gets good feedback
-//      if(!m_bPolarShowIcon)
+
+      if(!m_bPolarShowIcon)
       {
            
     
 //#ifdef PLUGIN_USE_SVG
-//       m_leftclick_tool_id = InsertPlugInToolSVG(_T( "Polar" ), _svg_polar, _svg_polar_rollover, _svg_polar_toggled,
-//            wxITEM_CHECK, _("Polar"), _T( "" ), NULL, POLAR_TOOL_POSITION, 0, this);
+//      m_leftclick_tool_id = InsertPlugInToolSVG(_T( "Polar" ), _
+//       svg_polar, _svg_polar_rollover, _svg_polar_toggled,
+//       wxITEM_CHECK, _("Polar"), _T( "" ), NULL, POLAR_TOOL_POSITION, 0, this);
 //#else
-   //   m_bPolarShowIcon = true;
+      m_bPolarShowIcon = true;
         m_leftclick_tool_id  = InsertPlugInTool (_T(""), _img_Polar, _img_Polar, wxITEM_CHECK, _("Polar"), _T(""), NULL, POLAR_TOOL_POSITION, 0, this);
 //#endif
       }
