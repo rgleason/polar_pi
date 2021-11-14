@@ -32,7 +32,7 @@ void initialize_images(void)
 
     fn.SetFullName(_T("polar_rollover.svg"));
     _svg_polar_rollover = fn.GetFullPath();
- 
+
     fn.SetFullName(_T("polar_toggled.svg"));
     _svg_polar_toggled = fn.GetFullPath();
 #endif

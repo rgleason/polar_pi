@@ -31,19 +31,19 @@ if(COMMAND cmake_policy)
 endif(COMMAND cmake_policy)
 
 # define plugin name, owner and versions
-set(VERBOSE_NAME "Polar")
+set(VERBOSE_NAME "polar")
 set(COMMON_NAME "Polar")  # Search "getcommonname"in <plugin_pi>.cpp
 set(TITLE_NAME "Polar")
 set(PACKAGE_CONTACT "Peter Tulp")
-set(PACKAGE "Polar")
+set(PACKAGE "polar")
 set(SHORT_DESCRIPTION "Polar Plugin makes polar diagrams for Weather Routing Predictions")
 set(LONG_DESCRIPTION "Polar Plugin reads VDR data files directly, reads from Opencpn input Nmea channel (Record Start/Stop at bottom) and direct from LogBoookKonni records, to creates a polar diagram which can then be edited manually, saved or loaded as a Boat Polar file. The LogbookKonni selection has several options.")
 
 set(VERSION_MAJOR "1")
 set(VERSION_MINOR "1")
 set(VERSION_PATCH "20")
-set(VERSION_TWEAK "9")
-set(VERSION_DATE "12/10/2021")# DD/MM/YYYY format
+set(VERSION_TWEAK "15")
+set(VERSION_DATE "14/10/2021")# DD/MM/YYYY format
 set(OCPN_MIN_VERSION "ov50")
 set(OCPN_API_VERSION_MAJOR "1")
 set(OCPN_API_VERSION_MINOR "16")
