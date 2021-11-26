@@ -80,12 +80,28 @@ polar_pi::polar_pi(void *ppimgr)
        wxLogDebug("Initiating image handlers.");
        wxInitAllImageHandlers();
     }
-    wxImage panelIcon(path);
-    if (panelIcon.IsOk())
-       m_panelBitmap = wxBitmap(panelIcon);
-    else
-       wxLogWarning("Findit panel icon has NOT been loaded");
+
+//From  Jon	
+// if (panelIcon.IsOk()) {
+//       m_panelBitmap = wxBitmap(panelIcon);
+//       m_bPolarShowIcon = true;
+//    }
+//    else {
+//       wxLogWarning("Findit panel icon has NOT been loaded");
+//       m_bPolarShowIcon = false;
+//    }	
+	
+	
+   wxImage panelIcon(path);
+   if (panelIcon.IsOk()) {
+      m_panelBitmap = wxBitmap(panelIcon);
+ //     m_bPolarShowIcon = true;
+   }
+    else {
+       wxLogWarning("Polar_pi panel icon has NOT been loaded");
        m_bPolarShowIcon = false;
+   }
+	   
  // End of from Shipdriver	  
 	  
 }
@@ -138,7 +154,6 @@ int polar_pi::Init(void)
     //         The Items will be re-parented when added to the real context menu
 
    wxMenu dummy_menu;
-     m_bPolarShowIcon = true;
      if(m_bPolarShowIcon)
 
 // For SVG Icon Use
@@ -189,7 +204,6 @@ void polar_pi::SetPluginMessage(wxString &message_id, wxString &message_body)
       {
 		if(m_pPolarDialog)
 			m_pPolarDialog->polar->setEngineStatus(message_body);
-												   
       }
 }
 
@@ -246,15 +260,8 @@ void polar_pi::SetDefaults(void)
 //      m_bPolarShowIcon = true;
       if(!m_bPolarShowIcon)
       {
-//#ifdef PLUGIN_USE_SVG
-//       m_leftclick_tool_id = InsertPlugInToolSVG( _T( "Polar" ),
-//          _svg_polar, _svg_polar_toggled, _svg_polar_toggled,
-//          wxITEM_CHECK, _("Polar"), _T( "" ), NULL, POLAR_TOOL_POSITION, 0, this);
-//#else
 //      m_bPolarShowIcon = true;
         m_leftclick_tool_id  = InsertPlugInTool (_T(""), _img_Polar, _img_Polar, wxITEM_CHECK, _("Polar"), _T(""), NULL, POLAR_TOOL_POSITION, 0, this);
-//#endif
-
       }
 }
 
@@ -317,14 +324,15 @@ void polar_pi::ShowPreferencesDialog( wxWindow* parent )
 
                   if(m_pPolarDialog)
                   {
-                    m_pPolarDialog->Destroy();
+//                   m_pPolarDialog->Destroy();
+                      delete m_pPolarDialog;
 
                     m_pPolarDialog = new PolarDialog( m_parent_window, this);
                 /*    m_pPolarDialog->Create ( m_parent_window, this, -1, _("Polar Display Control"), m_Polar_dir,
                                wxPoint( m_Polar_dialog_x, m_Polar_dialog_y), wxSize( m_Polar_dialog_sx,
                                m_Polar_dialog_sy));
 							   */
-                    m_pPolarDialog->Show();                        // Show modeless, so it stays on the screen
+                    m_pPolarDialog->Show();   // Show modeless, so it stays on the screen
                     SetToolbarItemState( m_leftclick_tool_id, true );
                   }
                   else

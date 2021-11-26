@@ -3,15 +3,17 @@
 ## Copyright:   
 ## License:     wxWidgets License
 ##---------------------------------------------------------------------------
-## Frontend Author: Jon Gough  Frontend2 Version: 1.0.180  Date:01/11/2021  DD/MM/YYYY       
+## Frontend Author: Jon Gough  Frontend2 Version: 1.0.183.1  Date:01/26/2021  DD/MM/YYYY       
 ##  buildCI:yes useODAPI:no validateJSON:no  
 ## ---------------------------------------------------------------------------
 ## ----- When changing this file do NOT change the order in which sections occur        ----- ##
 ## ----- Changes should only be made between the section blocks that identify where     ----- ##
 ## ----- these changes should be. The whole configuration process relies on this        ----- ##
 ## ----- sequence to be successful                                                      ----- ##
-##  
-##----- Modify section below to include all the details for your plugin ----- ##
+##
+
+##
+## ----- Modify section below to include all the details for your plugin ----- ##
 ##
 
 set(CMLOC "CMakeLists: ")
@@ -41,9 +43,9 @@ set(LONG_DESCRIPTION "Polar Plugin reads VDR data files directly, reads from Ope
 
 set(VERSION_MAJOR "1")
 set(VERSION_MINOR "1")
-set(VERSION_PATCH "22")
+set(VERSION_PATCH "23")
 set(VERSION_TWEAK "0")
-set(VERSION_DATE "14/10/2021")# DD/MM/YYYY format
+set(VERSION_DATE "26/11/2021")# DD/MM/YYYY format
 set(OCPN_MIN_VERSION "ov50")
 set(OCPN_API_VERSION_MAJOR "1")
 set(OCPN_API_VERSION_MINOR "16")
@@ -101,7 +103,7 @@ message(STATUS "${CMLOC}Build type: ${CMAKE_BUILD_TYPE}")
 ## ----- The statements below are used to setup standard variables that are required by the CMAKE process - do not remove ----- ##
 
 project(${PACKAGE})
-set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake;")
+set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
 ##======================================
 include("PluginSetup")
@@ -156,6 +158,28 @@ SET(HDRS
 	        src/jsonval.h
 	        src/json_defs.h
 )
+#set(OCPNSRC
+#    ocpnsrc/cutil.cpp
+#    ocpnsrc/TexFont.cpp
+#)
+
+#set(OCPNHDRS
+#    ocpninclude/cutil.h
+#    ocpninclude/ocpn_plugin.h
+#    ocpninclude/pluginmanager.h
+#    ocpninclude/shaders.h
+#    ocpninclude/TexFont.h
+#    ocpninclude/vector2D.h
+#    libs/ocpn-api/ocpn_plugin.h
+#)
+
+#set(EXTSRC
+#)
+#set(EXTINCLUDE
+#    extinclude/ODAPI.h
+#    extinclude/ODJSONSchemas.h
+#)
+
 set(LIBSSRC libs/wxJSON/src/jsonreader.cpp libs/wxJSON/src/jsonval.cpp libs/wxJSON/src/jsonwriter.cpp)
 
 set(LIBHDRS
@@ -163,10 +187,10 @@ set(LIBHDRS
     libs/GL/gl_private.h
     libs/GL/glext.h
     libs/GL/glu.h
-    libs/wx/include/json_defs.h
-    libs/wx/include/jsonreader.h
-    libs/wx/include/jsonval.h
-    libs/wx/include/jsonwriter.h)
+    libs/wxJSON/include/json_defs.h
+    libs/wxJSON/include/jsonreader.h
+    libs/wxJSON/include/jsonval.h
+    libs/wxJSON/include/jsonwriter.h)
 
 
 SET(SRC_LNMEA0183
@@ -242,17 +266,13 @@ set(EXTINCLUDE_DIR ${EXTINCLUDE_DIR} extinclude libs/ocpn-api/)
 # ----- If using JSON validation in plugin section above is needed ----- ##
 #
 
-# Modify/configure 'Include' Directories below for the Plugin
-
 #include_directories(BEFORE ${PROJECT_SOURCE_DIR}/include)
-include_directories(BEFORE ${PROJECT_SOURCE_DIR}/ocpninclude)
-include_directories(BEFORE ${PROJECT_SOURCE_DIR}/ocpnsrc/glu/include)
+#include_directories(BEFORE ${PROJECT_SOURCE_DIR}/ocpninclude)
 include_directories(BEFORE ${PROJECT_SOURCE_DIR}/${EXTINCLUDE_DIR})
 include_directories(BEFORE ${PROJECT_SOURCE_DIR}/libs/)
 include_directories(BEFORE ${PROJECT_SOURCE_DIR}/libs/GL)
 include_directories(BEFORE ${PROJECT_SOURCE_DIR}/libs/ocpn-api)
-include_directories(BEFORE ${PROJECT_SOURCE_DIR}/libs/wx/include)
-#include_directories(BEFORE ${PROJECT_SOURCE_DIR}/libs/wxJSON/include)
+include_directories(BEFORE ${PROJECT_SOURCE_DIR}/libs/wxJSON/include)
 include_directories(BEFORE ${PROJECT_SOURCE_DIR}/src/nmea0183)
 
 
@@ -268,52 +288,40 @@ endif(QT_ANDROID)
 
 
 ## Adjust statement below to collect all the set( headers and SRCS
-##  ADD_LIBRARY(${PACKAGE_NAME} SHARED ${SRC_POLAR} ${SRC_LNMEA0183})
 #target_sources(${PACKAGE_NAME} PUBLIC ${SRC_POLAR} ${SRC_LNMEA0183} ${EXTSRC} ${LIBSSRC})
 ## target_sources(${PACKAGE_NAME} PUBLIC ${SRCS} ${HDRS} ${OCPNSRC} ${EXTSRC} ${LIBSSRC})
 
-
+#target_sources(${PACKAGE_NAME} PUBLIC ${SRCS} ${HDRS} ${OCPNSRC} ${EXTSRC} ${LIBSSRC})
 ##=================================================
 target_sources(${PACKAGE_NAME} PUBLIC ${SRCS}  ${HDRS} ${SRC_LNMEA0183} ${EXTSRC})
 ##=================================================
 
 if(NOT OCPN_FLATPAK_CONFIG)
-    # Build environment not available when flatpak is being configured so following statements will not work
-    message(STATUS "${CMLOC}Adding target link libraries to ${PACKAGE_NAME}")
 
+    message(STATUS "${CMLOC}Adding target link libraries to ${PACKAGE_NAME}")
+	
+#    add_subdirectory(libs/nmea0183)
 #    add_subdirectory(libs/tinyxml)
+
+#    target_link_libraries(${PACKAGE_NAME} ocpn::nmea0183)
 #    target_link_libraries(${PACKAGE_NAME} ocpn::tinyxml)
+	
+
 endif(NOT OCPN_FLATPAK_CONFIG)
 	
 add_definitions(-DTIXML_USE_STL)
 
-if(UNIX AND NOT APPLE AND NOT QT_ANDROID)
-    if(PI_JSON_SCHEMA_VALIDATOR)
-        # Change OS/ABI to be UNIX - System V to make it run with OCPN
-        set(lib_name lib${PACKAGE_NAME}.so)
-        message(STATUS "${CMLOC}lib-name: ${lib_name}")
-        find_file(elfedit elfedit)
-        if(NOT (${elfedit} STREQUAL "elfedit-NOTFOUND"))
-            message(STATUS "${CMLOC}Will ensure OS/ABI is set to 0 to match OCPN")
-            add_custom_command(
-                TARGET ${PACKAGE_NAME}
-                POST_BUILD
-                WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
-                DEPENDS ${PACKAGE_NAME}
-                COMMENT " Running post build action on ${lib_name}."
-                COMMAND sh -c 'elfedit --input-osabi=Linux --output-osabi=none ${lib_name} || (echo 0) ')
-        else(NOT (${elfedit} STREQUAL "elfedit-NOTFOUND"))
-            message(STATUS "${CMLOC}Cannot correct OS/ABI to match OCPN if it is generated incorrectly. Package binutils needed")
-        endif(NOT (${elfedit} STREQUAL "elfedit-NOTFOUND"))
-    endif(PI_JSON_SCHEMA_VALIDATOR)
-endif(UNIX AND NOT APPLE AND NOT QT_ANDROID)
+
+#
+# ----- If using JSON validation in plugin section below is needed ----- ##
+#
 
 # Not using Json Schema Validator
 
-#These are NOT used in Testplugin, sometimes used for other plugins
-#include("cmake/PluginJSON.cmake")
-#include("cmake/PluginXML.cmake")
-#include("cmake/PluginGL.cmake")
+#
+# ----- If using JSON validation in plugin section above is needed ----- ##
+#
+
 
 ## ----- Change above to match project requirements ----- ##
 ## ----- do not change next section - needed to configure build process ----- ##
