@@ -21,7 +21,10 @@ REM      -DCMAKE_BUILD_TYPE=RelWithDebInfo  ..
 REM cmake --build . --target tarball --config RelWithDebInfo >output.txt
 
 REM  For Opencpn 5.7.1 and wxWidgets-3.2.1
+
+
 cd build
+REM cmake -T v143 -A Win32 -DOCPN_TARGET=MSVC ..
 cmake -T v143 -A Win32 ..
 cmake --build . --target package --config relwithdebinfo >output.txt
 bash ./cloudsmith-upload.sh

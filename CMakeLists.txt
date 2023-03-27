@@ -43,9 +43,9 @@ set(LONG_DESCRIPTION "Polar Plugin reads VDR data files directly, reads from Ope
 
 set(VERSION_MAJOR "1")
 set(VERSION_MINOR "2")
-set(VERSION_PATCH "1")
+set(VERSION_PATCH "2")
 set(VERSION_TWEAK "0")
-set(VERSION_DATE "26/03/2023")# DD/MM/YYYY format
+set(VERSION_DATE "27/03/2023")# DD/MM/YYYY format
 set(OCPN_MIN_VERSION "ov57")
 set(OCPN_API_VERSION_MAJOR "1")
 set(OCPN_API_VERSION_MINOR "16")
@@ -68,7 +68,7 @@ set(BETA "beta")    #Standard Repos
 set(ALPHA "alpha")  #Standard Repos
 # Set if your Cloudsmith Base Repository name does not match your Git repository name.
 # set(CLOUDSMITH_BASE_REPOSITORY "${GIT_REPOSITORY_NAME}")
-# set (CLOUDSMITH_BASE_REPOSITORY "polar")  #without the pi 
+set (CLOUDSMITH_BASE_REPOSITORY "polar")  #without the pi 
 
 set(CLOUDSMITH_USER "opencpn")
 #set(CLOUDSMITH_USER "rick-gleason")
@@ -302,10 +302,10 @@ if(NOT OCPN_FLATPAK_CONFIG)
     # Build environment not available when flatpak is being configured so following statements will not work
     message(STATUS "${CMLOC}Adding target link libraries to ${PACKAGE_NAME}")
     
-    add_subdirectory(libs/tinyxml)
+#    add_subdirectory(libs/tinyxml)
 #    add_subdirectory(libs/nmea0183)
 
-   target_link_libraries(${PACKAGE_NAME} ocpn::tinyxml)
+#   target_link_libraries(${PACKAGE_NAME} ocpn::tinyxml)
 #   target_link_libraries(${PACKAGE_NAME} ocpn::nmea0183)   
 endif(NOT OCPN_FLATPAK_CONFIG)
 	
