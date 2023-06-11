@@ -44,8 +44,8 @@ set(LONG_DESCRIPTION "Polar Plugin reads VDR data files directly, reads from Ope
 set(VERSION_MAJOR "1")
 set(VERSION_MINOR "2")
 set(VERSION_PATCH "4")
-set(VERSION_TWEAK "0")
-set(VERSION_DATE "06/09/2023")# DD/MM/YYYY format
+set(VERSION_TWEAK "1")
+set(VERSION_DATE "06/10/2023")# DD/MM/YYYY format
 set(OCPN_MIN_VERSION "ov57")
 set(OCPN_API_VERSION_MAJOR "1")
 set(OCPN_API_VERSION_MINOR "16")
@@ -282,9 +282,9 @@ include_directories(BEFORE ${PROJECT_SOURCE_DIR}/src/nmea0183)
 ## ----- Change below to match project requirements for android build ----- ##
 
 
-if(QT_ANDROID)
-    include_directories( ${PROJECT_SOURCE_DIR}/extinclude/GLES2)
-endif(QT_ANDROID)
+#if(QT_ANDROID)
+#    include_directories( ${PROJECT_SOURCE_DIR}/extinclude/GLES2)
+#endif(QT_ANDROID)
 
 ## ----- Change above to match project requirements for android build ----- ##
 
