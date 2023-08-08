@@ -1,5 +1,5 @@
-build/
-buildwin/
-src/version.h
-.directory
+./build*
 po/POTFILES.in.test
+temp
+tmp
+master.zip
