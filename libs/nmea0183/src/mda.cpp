@@ -84,7 +84,6 @@ bool MDA::Parse( const SENTENCE& sentence )
 */
 
 
-
    /*
    ** First we check the checksum...
    */
@@ -97,9 +96,7 @@ bool MDA::Parse( const SENTENCE& sentence )
 
 Pressure       = sentence.Double( 3 );
 UnitOfMeasurement = sentence.Field( 4 );
-
 RelativeHumidity       = sentence.Double( 9 );
-
 
 if(UnitOfMeasurement==wxT("B"))
 {

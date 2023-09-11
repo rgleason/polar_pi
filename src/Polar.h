@@ -8,7 +8,7 @@
 #include <wx/dynarray.h>
 #include <map>
 
-#include "nmea0183/nmea0183.h"
+#include "nmea0183.h"
 
 WX_DEFINE_ARRAY_DOUBLE(int, ArrayOfDouble);
 
