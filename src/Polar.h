@@ -96,7 +96,7 @@ private:
 	PolarDialog*	dlg;
 	FilterDlg*		filterDlg;
 
-	NMEA0183P       	m_NMEA0183;
+	NMEA0183       	m_NMEA0183;
 
 	wxString		logbookDataPath;
 	wxSize			center;
