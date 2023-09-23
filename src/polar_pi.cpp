@@ -40,8 +40,8 @@
 #include "Polar.h"
 #include "Options.h"
 
-//#include "jsonreader.h"
-//#include "jsonwriter.h"
+#include "wx/jsonreader.h"
+#include "wx/jsonwriter.h"
 #include "icons.h"
 
 // the class factories, used to create and destroy instances of the PlugIn
