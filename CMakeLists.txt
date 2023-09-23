@@ -59,6 +59,7 @@ set(VERSION_PATCH "8")
 set(VERSION_TWEAK "1")
 set(VERSION_DATE  "23/09/2023")#DD/MM/YYYY format
 set(OCPN_MIN_VERSION "ov58")
+
 set(OCPN_API_VERSION_MAJOR "1")
 set(OCPN_API_VERSION_MINOR "16")
 set(TP_COMMENT "  * Release using CI")
@@ -247,20 +248,6 @@ SET(SRC ${SRCS} ${HDRS} )
 ##=============================================================
 
 #include_directories(BEFORE ${PROJECT_SOURCE_DIR}/include)
-
-#include_directories(BEFORE ${PROJECT_SOURCE_DIR}/libs/)
-#include_directories(BEFORE ${PROJECT_SOURCE_DIR}/libs/GL)
-
-#include_directories(BEFORE ${PROJECT_SOURCE_DIR}/libs/ocpn-api)
-#include_directories(BEFORE ${PROJECT_SOURCE_DIR}/libs/wxJSON/include)
-
-## Tried but causes errors m_nmea0183 not defined, etc.
-include_directories(BEFORE ${PROJECT_SOURCE_DIR}/libs/nmea0183)
-include_directories(BEFORE ${PROJECT_SOURCE_DIR}/libs/nmea0183/src)
-## Using older nmea
-##include_directories(BEFORE ${PROJECT_SOURCE_DIR}/src/nmea0183)
-#include_directories(BEFORE ${PROJECT_SOURCE_DIR}/libs/pluginDC/include)
-
 
 ## Change target_sources to match your project needs.
 ##==============================================================
