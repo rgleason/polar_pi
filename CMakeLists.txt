@@ -55,9 +55,9 @@ set(LONG_DESCRIPTION "Polar Plugin reads VDR data files directly, reads from Ope
 
 set(VERSION_MAJOR "1")
 set(VERSION_MINOR "2")
-set(VERSION_PATCH "10")
+set(VERSION_PATCH "11")
 set(VERSION_TWEAK "0")
-set(VERSION_DATE  "23/09/2023")#DD/MM/YYYY format
+set(VERSION_DATE  "25/09/2023")#DD/MM/YYYY format
 set(OCPN_MIN_VERSION "ov58")
 
 set(OCPN_API_VERSION_MAJOR "1")
@@ -248,10 +248,8 @@ SET(SRC ${SRCS} ${HDRS} )
 ##=============================================================
 
 #include_directories(BEFORE ${PROJECT_SOURCE_DIR}/include)
-
 include_directories(BEFORE ${PROJECT_SOURCE_DIR}/opencpn-libs/glu/include)
-include_directories(BEFORE ${PROJECT_SOURCE_DIR}/opencpn-libs/wxJSON/include)
-
+#include_directories(BEFORE ${PROJECT_SOURCE_DIR}/opencpn-libs/wxJSON/include)
 
 ## Change target_sources to match your project needs.
 ##==============================================================
