@@ -248,7 +248,7 @@ SET(SRC ${SRCS} ${HDRS} )
 ##=============================================================
 
 #include_directories(BEFORE ${PROJECT_SOURCE_DIR}/include)
-include_directories(BEFORE ${PROJECT_SOURCE_DIR}/opencpn-libs/glu/include)
+#include_directories(BEFORE ${PROJECT_SOURCE_DIR}/opencpn-libs/glu/include)
 
 
 ## Change target_sources to match your project needs.
