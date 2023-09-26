@@ -15,6 +15,7 @@
 #include <wx/stdpaths.h>
 #include <wx/progdlg.h>
 #include <wx/gdicmn.h>
+#include <wx/filename.h>
 
 #include "nmea0183.h"
 #include "polar_pi.h"
