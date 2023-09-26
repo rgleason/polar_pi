@@ -174,8 +174,11 @@ int polar_pi::Init(void)
 bool polar_pi::DeInit(void)
 {
 //      printf("polar_pi DeInit()\n");
-      if(m_pPolarDialog)
-            m_pPolarDialog->Close();
+      if(m_pPolarDialog) {
+        m_pPolarDialog->Close();
+        delete m_pPolarDialog;
+        m_pPolarDialog = NULL;
+      }
 
       return true;
 }
