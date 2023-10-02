@@ -19,7 +19,7 @@
 ## *   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                                       *
 #-----------------------------------------------------------------------------
 # Frontend2 Author: Jon Gough 
-# Testplugn(TP) v1.0.256.0 17/09/2023 DD/MM/YYYY format
+# Testplugin(TP) v1.0.259.0 01/10/2023 DD/MM/YYYY format
 # buildCI:yes useODAPI:no validateJSON:no
 # ---------------------------------------------------------------------------
 ## -- When changing this file do NOT change the order of the sections.    -- ##
@@ -55,13 +55,13 @@ set(LONG_DESCRIPTION "Polar Plugin reads VDR data files directly, reads from Ope
 
 set(VERSION_MAJOR "1")
 set(VERSION_MINOR "2")
-set(VERSION_PATCH "13")
+set(VERSION_PATCH "14")
 set(VERSION_TWEAK "0")
-set(VERSION_DATE  "26/09/2023")#DD/MM/YYYY format
+set(VERSION_DATE  "02/10/2023")#DD/MM/YYYY format
 set(OCPN_MIN_VERSION "ov58")
 
 set(OCPN_API_VERSION_MAJOR "1")
-set(OCPN_API_VERSION_MINOR "16")
+set(OCPN_API_VERSION_MINOR "17")
 set(TP_COMMENT "  * Release using CI")
 
 set(PARENT "opencpn")
@@ -165,64 +165,7 @@ SET(HDRS
             src/icons.h 
 )
 
-# Tried to use Standard libs/nmea0183 but it is different
-# Also causes errors "m_nmea0183"  not defined, etc.
-#SET(SRC_LNMEA0183
-#		src/nmea0183/LatLong.hpp
-#		src/nmea0183/latlong.cpp
-#		src/nmea0183/long.cpp
-#		src/nmea0183/nmea0183.cpp
-#		src/nmea0183/nmea0183.hpp
-#		src/nmea0183/Response.hpp
-#		src/nmea0183/response.cpp
-#		src/nmea0183/RMB.hpp
-#		src/nmea0183/rmb.cpp
-#		src/nmea0183/Sentence.hpp
-#		src/nmea0183/sentence.cpp
-#		src/nmea0183/talkerid.cpp
-#		src/nmea0183/RMC.HPP
-#		src/nmea0183/rmc.cpp
-#		src/nmea0183/hexvalue.cpp
-#		src/nmea0183/lat.cpp
-#		src/nmea0183/expid.cpp
-#		src/nmea0183/wpl.hpp
-#		src/nmea0183/wpl.cpp
-#		src/nmea0183/rte.hpp
-#		src/nmea0183/rte.cpp
-#		src/nmea0183/hdt.hpp
-#		src/nmea0183/hdt.cpp
-#		src/nmea0183/hdg.hpp
-#		src/nmea0183/hdg.cpp
-#		src/nmea0183/hdm.hpp
-#		src/nmea0183/hdm.cpp
-#		src/nmea0183/gll.hpp
-#		src/nmea0183/gll.cpp
-#		src/nmea0183/vtg.hpp
-#		src/nmea0183/vtg.cpp
-#		src/nmea0183/gga.hpp
-#		src/nmea0183/gga.cpp
-#		src/nmea0183/gsv.hpp
-#		src/nmea0183/gsv.cpp
-#		src/nmea0183/dbt.cpp
-#		src/nmea0183/dbt.hpp
-#		src/nmea0183/dpt.cpp
-#		src/nmea0183/dpt.hpp
-#		src/nmea0183/mtw.cpp
-#		src/nmea0183/mtw.hpp
-#		src/nmea0183/mwv.cpp
-#		src/nmea0183/mwv.hpp
-#		src/nmea0183/vhw.hpp
-#		src/nmea0183/vhw.cpp
-#		src/nmea0183/vwr.cpp
-#		src/nmea0183/vwr.hpp
-#		src/nmea0183/vwt.cpp
-#		src/nmea0183/vwt.hpp
-#		src/nmea0183/zda.cpp
-#		src/nmea0183/zda.hpp
-#		src/nmea0183/rsa.hpp
-#		src/nmea0183/rsa.cpp
-#		src/nmea0183/SatInfo.h
-#        )
+
 
 add_definitions(-DPLUGIN_USE_SVG)
 
@@ -264,7 +207,7 @@ if(NOT OCPN_FLATPAK_CONFIG)
     add_subdirectory(opencpn-libs/WindowsHeaders)
     target_link_libraries(${PACKAGE_NAME} windows::headers)
 
-    add_subdirectory(opencpn-libs/api-16)
+    add_subdirectory(opencpn-libs/api-17)
     target_link_libraries(${PACKAGE_NAME} ocpn::api)
 
     add_subdirectory(opencpn-libs/wxJSON)
