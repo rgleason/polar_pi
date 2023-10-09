@@ -55,9 +55,9 @@ set(LONG_DESCRIPTION "Polar Plugin reads VDR data files directly, reads from Ope
 
 set(VERSION_MAJOR "1")
 set(VERSION_MINOR "2")
-set(VERSION_PATCH "15")
+set(VERSION_PATCH "20")
 set(VERSION_TWEAK "0")
-set(VERSION_DATE  "07/10/2023")#DD/MM/YYYY format
+set(VERSION_DATE  "09/10/2023")#DD/MM/YYYY format
 set(OCPN_MIN_VERSION "ov58")
 
 set(OCPN_API_VERSION_MAJOR "1")
