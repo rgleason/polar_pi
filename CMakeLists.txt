@@ -18,8 +18,7 @@
 ## *   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx,                                       *
 ## *   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                                       *
 #-----------------------------------------------------------------------------
-# Frontend2 Author: Jon Gough 
-# Testplugin(TP) v1.0.286.3 29/12/2023 DD/MM/YYYY format
+# Frontend2 Author: Jon Gough Testplugin(TP) v1.0.326.0 18/01/2025 DD/MM/YYYY
 # buildCI:yes useODAPI:no validateJSON:no
 # ---------------------------------------------------------------------------
 ## -- When changing this file do NOT change the order of the sections.    -- ##
@@ -56,9 +55,9 @@ set(LONG_DESCRIPTION "Polar Plugin reads VDR data files directly, reads from Ope
 
 set(VERSION_MAJOR "1")
 set(VERSION_MINOR "2")
-set(VERSION_PATCH "31")
+set(VERSION_PATCH "33")
 set(VERSION_TWEAK "0")
-set(VERSION_DATE  "23/01/2023")#DD/MM/YYYY format
+set(VERSION_DATE  "18/01/2024")#DD/MM/YYYY format
 set(OCPN_MIN_VERSION "ov58")
 
 set(OCPN_API_VERSION_MAJOR "1")
@@ -179,7 +178,7 @@ add_definitions(-DPLUGIN_USE_SVG)
 ## This add_library  can be used in conditionals below.
 ##=============================================================
 
-SET(SRC ${SRCS} ${HDRS} )
+set(SRC ${SRCS} ${HDRS})
 
 ##=============================================================
 ## Modify/configure 'Include' Directories below for the Plugin
@@ -190,19 +189,19 @@ SET(SRC ${SRCS} ${HDRS} )
 ## Change target_sources to match your project needs.
 ##==============================================================
 
-target_sources(${PACKAGE_NAME} PUBLIC ${SRC} )
+target_sources(${PACKAGE_NAME} PUBLIC ${SRC})
 
 ##==============================================================
 
-if(NOT OCPN_FLATPAK_CONFIG)
-    # Build environment not available when flatpak is being configured 
-	# so following statements will not work
-    message(STATUS "${CMLOC}Adding target link libraries to ${PACKAGE_NAME}")
+if (NOT OCPN_FLATPAK_CONFIG)
+  # Build environment not available when flatpak is being configured so
+  # following statements will not work
+  message(STATUS "${CMLOC}Adding target link libraries to ${PACKAGE_NAME}")
 
-    if (WIN32)
-        add_subdirectory(opencpn-libs/WindowsHeaders)
-        target_link_libraries(${PACKAGE_NAME} windows::headers)
-    endif (WIN32)
+  if (WIN32)
+    add_subdirectory(opencpn-libs/WindowsHeaders)
+    target_link_libraries(${PACKAGE_NAME} windows::headers)
+  endif (WIN32)
 
     add_subdirectory(opencpn-libs/api-17)
     target_link_libraries(${PACKAGE_NAME} ocpn::api)
@@ -230,9 +229,9 @@ add_definitions(-DTIXML_USE_STL)
 ##------- Change below to match project requirements --------------------##
 
 # Needed for android builds
-if(QT_ANDROID)
-    include_directories(BEFORE ${qt_android_include})
-endif(QT_ANDROID)
+if (QT_ANDROID)
+  include_directories(BEFORE ${qt_android_include})
+endif (QT_ANDROID)
 
 ## Needed for all builds Do not change - needed to build app -------------##
 ##===============================================================
@@ -245,8 +244,11 @@ include("PluginPackage")
 ## ----- Do not change section above - needed to configure build process --##
 
 message(STATUS "${CMLOC}include directories: ")
-get_property(dirs DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY INCLUDE_DIRECTORIES)
-foreach(dir ${dirs})
-    message(STATUS "${CMLOC}dir='${dir}'")
-endforeach()
-
+get_property(
+  dirs
+  DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+  PROPERTY INCLUDE_DIRECTORIES
+)
+foreach (dir ${dirs})
+  message(STATUS "${CMLOC}dir='${dir}'")
+endforeach ()
