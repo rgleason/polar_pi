@@ -55,7 +55,7 @@ set(LONG_DESCRIPTION "Polar Plugin reads VDR data files directly, reads from Ope
 
 set(VERSION_MAJOR "1")
 set(VERSION_MINOR "2")
-set(VERSION_PATCH "35")
+set(VERSION_PATCH "36")
 set(VERSION_TWEAK "0")
 set(VERSION_DATE  "19/01/2024")#DD/MM/YYYY format
 set(OCPN_MIN_VERSION "ov58")
@@ -203,7 +203,7 @@ if (NOT OCPN_FLATPAK_CONFIG)
     target_link_libraries(${PACKAGE_NAME} windows::headers)
   endif (WIN32)
 
-    add_subdirectory(opencpn-libs/api-17)
+    add_subdirectory(opencpn-libs/api-18)
     target_link_libraries(${PACKAGE_NAME} ocpn::api)
 
     add_subdirectory(opencpn-libs/wxJSON)
